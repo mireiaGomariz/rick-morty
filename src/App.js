@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
+import Navbar from './Components/Navbar/navbar';
+
+
+
 
 
 class App extends Component {
 
-  constructor(props) {
-
     //get all the propieties of the content
 
-    super(props);
-    this.state = {
-      items: [],
+    state = {
+      characters: [],
       isLoaded: false,
     }
-  }
 
   componentDidMount() {
 
-    fetch('https://rickandmortyapi.com/api')
+    fetch('https://rickandmortyapi.com/api/character')
       .then(res => res.json())
       .then(json => {
 
@@ -25,29 +25,35 @@ class App extends Component {
 
           this.setState ({
             isLoaded: true,
-            items: json
+            characters: json.results
           })
       });
 
   }
 
+
   render() {
 
-    var { isLoaded, items } = this.state;
+    console.log(this.state)
 
-    if (!isLoaded) {
+    if (this.state.isLoaded === false) {
       return <div> Loading...</div>;
 
     }else {
       return(
         <div className="App">
-            Data has been loaded
+
+          < Navbar/>
+          <h1>{this.state.characters[0].name}</h1>
+          <img src={this.state.characters[0].image} alt={this.state.characters[0].name} />
+          
         </div>
       );
     }
 
   }
 }
+
 
 
 export default App;
