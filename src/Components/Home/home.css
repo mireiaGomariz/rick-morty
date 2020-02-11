@@ -1,6 +1,11 @@
+
+
+
+
+
 .homeContainer {
-  display: inline-flex;
-  background-image: url('./background4.jpeg');
+  /* display: inline-flex; */
+  /* background-image: url('./background4.jpeg'); */
   height: 100vh;
   width: 95%;
   position: absolute;

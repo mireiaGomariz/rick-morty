@@ -1,4 +1,8 @@
 import React , { Component } from 'react';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import Navbar from './Navbar/navbar'
+
 import './home.css';
 
 class Home extends Component {
@@ -8,9 +12,30 @@ class Home extends Component {
   }
   render() {
     return (
-      <div>
-        <div className="row justify-content-end ml-3">{this.state.username}</div>
+    <div>
+      < Navbar />
+      <div className="container">
+        <Card className="row d-flex justify-content-end" style={{ width: '18rem' }}>
+          <Card.Body>
+            <Card.Title> WELCOME </Card.Title>
+            <Card.Text><h1>{this.state.username}</h1></Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
         <div className="homeContainer">
+          <Card>
+            <Card.Body>
+              <Card.Title> GAME #1 </Card.Title>
+              <Button href="/game1"> Game 1</Button>
+            </Card.Body>
+          </Card>
+
+          <Card>
+            <Card.Body>
+              <Card.Title> GAME #2 </Card.Title>
+              <Button href="/game2"> Game 2</Button>
+            </Card.Body>
+          </Card>
         </div>
       </div>
     )
