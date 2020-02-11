@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import Navbar from './Components/Navbar/navbar';
+import Navbar from './Components/Home/Navbar/navbar';
 import Home from './Components/Home/home';
-import EntryPage from './Components/EntryPage/entrypage'
+import EntryPage from './Components/EntryPage/entrypage';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import Game1 from './Components/Games/Game1/game1'
+import Game2 from './Components/Games/Game2/game2'
 
 class App extends Component {
 
@@ -26,7 +28,6 @@ class App extends Component {
             characters: json.results
           })
       });
-
   }
 
   render() {
@@ -42,17 +43,21 @@ class App extends Component {
             <Switch>
               <Route path="/entry" component={EntryPage} />
               <Route path="/home" component={Home} />
-              <Route exact path="/" render={() => (<Redirect to="/entry" />)} />  
+              <Route
+                path='/game1'
+                render={(props) => <Game1 {...props} characters={this.state.characters} />}
+              />
+              <Route path="/game2" component={Game2} />
+
+              <Route exact path="/" render={() => (<Redirect to="/entry" />)} />
             </Switch>
           </BrowserRouter >
             {/*
-            <h1>{this.state.characters[0].name}</h1>
-            <img src={this.state.characters[0].image} alt={this.state.characters[0].name} />
+              <h1>{this.state.characters[0].name}</h1>
+              <img src={this.state.characters[0].image} alt={this.state.characters[0].name} />
             */}
          </div>
        </div>
-
-
       );
     }
   }
