@@ -4,10 +4,6 @@ import Navbar from './Components/Navbar/navbar';
 import Home from './Components/Home/home';
 import EntryPage from './Components/EntryPage/entrypage'
 
-
-
-
-
 class App extends Component {
 
     //get all the propieties of the content
@@ -41,6 +37,7 @@ class App extends Component {
 
     }else {
       return(
+
         <div className="App">
 
         < EntryPage/>
@@ -51,7 +48,9 @@ class App extends Component {
         //
         //   <h1>{this.state.characters[0].name}</h1>
         //   <img src={this.state.characters[0].image} alt={this.state.characters[0].name} />
+
        </div>
+
       );
     }
 
