@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navbar from './Components/Navbar/navbar';
+import Home from './Components/Home/home';
+import EntryPage from './Components/EntryPage/entrypage'
 
 
 
@@ -31,10 +33,8 @@ class App extends Component {
 
   }
 
-
   render() {
 
-    console.log(this.state)
 
     if (this.state.isLoaded === false) {
       return <div> Loading...</div>;
@@ -43,11 +43,15 @@ class App extends Component {
       return(
         <div className="App">
 
-          < Navbar/>
-          <h1>{this.state.characters[0].name}</h1>
-          <img src={this.state.characters[0].image} alt={this.state.characters[0].name} />
-          
-        </div>
+        < EntryPage/>
+
+        //   < Navbar/>
+        //
+        //   < Home />
+        //
+        //   <h1>{this.state.characters[0].name}</h1>
+        //   <img src={this.state.characters[0].image} alt={this.state.characters[0].name} />
+       </div>
       );
     }
 
