@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './Components/Navbar/navbar';
 import Home from './Components/Home/home';
 import EntryPage from './Components/EntryPage/entrypage'
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 class App extends Component {
 
@@ -14,7 +15,6 @@ class App extends Component {
     }
 
   componentDidMount() {
-
     fetch('https://rickandmortyapi.com/api/character')
       .then(res => res.json())
       .then(json => {
@@ -30,30 +30,31 @@ class App extends Component {
   }
 
   render() {
-
-
     if (this.state.isLoaded === false) {
       return <div> Loading...</div>;
 
     }else {
       return(
-
-        <div className="App">
-
-        < EntryPage/>
-
-        //   < Navbar/>
-        //
-        //   < Home />
-        //
-        //   <h1>{this.state.characters[0].name}</h1>
-        //   <img src={this.state.characters[0].image} alt={this.state.characters[0].name} />
-
+        <div>
+          <script src="https://unpkg.com/react-router-dom/umd/react-router-dom.min.js"></script>
+          <div className="App">
+          <BrowserRouter >
+            <Switch>
+              <Route path="/entry" component={EntryPage} />
+              <Route path="/home" component={Home} />
+              <Route exact path="/" render={() => (<Redirect to="/entry" />)} />  
+            </Switch>
+          </BrowserRouter >
+            {/*
+            <h1>{this.state.characters[0].name}</h1>
+            <img src={this.state.characters[0].image} alt={this.state.characters[0].name} />
+            */}
+         </div>
        </div>
+
 
       );
     }
-
   }
 }
 
