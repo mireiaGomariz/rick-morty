@@ -1,6 +1,9 @@
 
 import React , { Component } from 'react';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import './entrypage.css';
+
 
 class EntryPage extends Component {
 
@@ -9,29 +12,26 @@ class EntryPage extends Component {
     this.state = { username: "" };
 
   }
-
-    render() {
+  render() {
     return (
-
-      <div className="entryPage">
-        <label>Enter your Name: </label>
-
-        <input
-          id= "username"
-          type= "text"
-          onChange = {event => {
-            var input = event.target.value;
-            this.setState({ username : input })
-          }
-        }
-
-        />
-        <h1>{this.state.username}</h1>
-
-      </div>
+      <Card style={{ width: '18rem' }}>
+        <Card.Body>
+          <Card.Title>Enter your Name: </Card.Title>
+          <input
+            id= "username"
+            type= "text"
+          />
+          <Button className="btn btn-danger mt-3"
+          type= "button"
+           onClick = {event => {
+             var input = document.getElementById("username").value
+             this.setState({ username : input })
+           }}
+          > Clickme </Button>
+          <Card.Text>{this.state.username}</Card.Text>
+        </Card.Body>
+      </Card>
     )
-
-
   }
 }
 
