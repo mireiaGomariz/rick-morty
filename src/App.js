@@ -48,14 +48,9 @@ class App extends Component {
                 render={(props) => <Game1 {...props} characters={this.state.characters} />}
               />
               <Route path="/game2" component={Game2} />
-
               <Route exact path="/" render={() => (<Redirect to="/entry" />)} />
             </Switch>
           </BrowserRouter >
-            {/*
-              <h1>{this.state.characters[0].name}</h1>
-              <img src={this.state.characters[0].image} alt={this.state.characters[0].name} />
-            */}
          </div>
        </div>
       );

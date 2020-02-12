@@ -7,12 +7,11 @@ class Game1 extends Component {
   }
 
   render() {
-
+    var character = this.props.characters[0]
     return (
       <div className="row">
-        {this.props.characters.map( function(character, i){
-          return (
-            <div key={["key"+i]} className="col-4">
+
+            <div className="col-4">
               <h1>{character.name}</h1>
               <img src={character.image} alt={character.name} />
               <div id={["buttons"+character.id]} className="row">
@@ -55,8 +54,7 @@ class Game1 extends Component {
               </div>
               <h1 id={["validation"+character.id]} value=""></h1>
             </div>
-          )
-        })}
+          
       </div>
     )
   }
