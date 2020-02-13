@@ -17,7 +17,7 @@ class App extends Component {
     }
 
   componentDidMount() {
-    fetch('https://rickandmortyapi.com/api/character/?page=19')
+    fetch('https://rickandmortyapi.com/api/character/?page=1')
       .then(res => res.json())
       .then(json => {
 

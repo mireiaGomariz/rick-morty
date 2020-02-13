@@ -8,10 +8,37 @@ class Game1 extends Component {
       character : this.props.characters[0],
       currentIndex: 0,
       points: 0,
-      buttonClicked: true,
+      buttonClicked: false,
       answer: ""
-
     }
+  }
+
+  checkIfAliveOrDead = event => {
+    if (this.state.character.status === event.target.textContent) {
+      this.setState({
+        answer: "Correcte",
+        buttonClicked: true,
+        points: this.state.points + 10,
+      })
+    }else{
+      this.setState({
+        answer: "Incorrecte",
+        buttonClicked: true,
+        points: this.state.points - 5,
+      })
+    }
+  }
+
+  nextButton = event => {
+    let newIndex = this.state.currentIndex + 1
+    let newCharacter = this.props.characters[newIndex]
+    this.setState({
+      character: newCharacter,
+      currentIndex: newIndex,
+      buttonClicked: false,
+      answer: ""
+    })
+
   }
 
   render() {
@@ -21,100 +48,39 @@ class Game1 extends Component {
         <div className="col-4">
           <h1>{character.name}</h1>
           <img src={character.image} alt={character.name} />
-          {this.state.buttonClicked &&
-
-          <div id={["buttons"+character.id]} className="row">
-            <div className="col mt-2 mb-4">
-              <div>
-                <Button className="ml-2 btn btn-info"
-                 type="button"
-                 onClick = {event => {
-                   document.getElementById(["buttons"+character.id]).style.display = 'none';
-                   if (character.status === "Alive") {
-                     console.log(this.state.points);
-                     // document.getElementById(["validation"+character.id]).innerHTML="Correcte"
-                     this.setState({
-                       answer: "Correcte",
-                       buttonClicked: false,
-                       points: this.state.points + 10,
-                     })
-                   }else{
-                     // document.getElementById(["validation"+character.id]).innerHTML="Incorrecte"
-                     this.setState({
-                       answer: "Incorrecte",
-                       buttonClicked: false,
-                       points: this.state.points - 5,
-                     })
-                   }
-                 }}
-                > Alive </Button>
-                <Button className="ml-2 btn btn-danger"
-                 type="button"
-                 onClick = {event => {
-                   document.getElementById(["buttons"+character.id]).style.display = 'none';
-                   if (character.status === "Dead") {
-                     // document.getElementById(["validation"+character.id]).innerHTML="Correcte"
-                     this.setState({
-                       answer: "Correcte",
-                       buttonClicked: false,
-                       points: this.state.points + 10,
-                     })
-                   }else{
-                     // document.getElementById(["validation"+character.id]).innerHTML="Incorrecte"
-                     this.setState({
-                       answer: "Incorrecte",
-                       buttonClicked: false,
-                       points: this.state.points - 5,
-                     })
-                   }
-
-                 }}
-                > Dead </Button>
-                <Button className="ml-2 btn btn-warning"
-                 type="button"
-                 onClick = {event => {
-                   document.getElementById(["buttons"+character.id]).style.display = 'none';
-                   if (character.status === "unknown") {
-                     // document.getElementById(["validation"+character.id]).innerHTML="Correcte"
-                     this.setState({
-                       answer: "Correcte",
-                       buttonClicked: false,
-                       points: this.state.points + 10,
-                     })
-                   }else{
-                     // document.getElementById(["validation"+character.id]).innerHTML="Incorrecte"
-                     this.setState({
-                       answer: "Incorrecte",
-                       buttonClicked: false,
-                       points: this.state.points - 5,
-                     })
-                   }
-                 }}
-                > Unknown </Button>
+          {this.state.buttonClicked
+            ?
+            <div>
+            <h2>{this.state.answer}</h2>
+            <Button
+              type="button"
+              onClick = {this.nextButton}>
+              NEXT</Button>
+            </div>
+            :
+            <div id={["buttons"+character.id]} className="row">
+              <div className="col mt-2 mb-4">
+                <div>
+                  <Button className="ml-2 btn btn-info"
+                   type="button"
+                   onClick = {this.checkIfAliveOrDead}
+                  >Alive</Button>
+                  <Button className="ml-2 btn btn-danger"
+                   type="button"
+                   onClick = {this.checkIfAliveOrDead}
+                  >Dead</Button>
+                  <Button className="ml-2 btn btn-warning"
+                   type="button"
+                   onClick = {this.checkIfAliveOrDead}
+                  >Unknown</Button>
+                </div>
               </div>
             </div>
-          </div>
         }
-          <h2>{this.state.answer}</h2>
-
-          <h1 id={["validation"+character.id]} value=""></h1>
-          <Button
-          type="button"
-          onClick = {() => {
-            let newIndex = this.state.currentIndex + 1
-            let newCharacter = this.props.characters[newIndex]
-            this.setState({
-              character: newCharacter,
-              currentIndex: newIndex,
-              buttonClicked: true,
-              answer: ""
-            })
-          }}>
-          NEXT
-          </Button>
-          <h1>Points: {this.state.points}</h1>
-        </div>
+        <h1 id={["validation"+character.id]} value=""></h1>
+        <h1>Points: {this.state.points}</h1>
       </div>
+    </div>
     )
   }
 }
