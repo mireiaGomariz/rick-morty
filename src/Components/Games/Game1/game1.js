@@ -31,16 +31,19 @@ class Game1 extends Component {
                  onClick = {event => {
                    document.getElementById(["buttons"+character.id]).style.display = 'none';
                    if (character.status === "Alive") {
+                     console.log(this.state.points);
                      // document.getElementById(["validation"+character.id]).innerHTML="Correcte"
                      this.setState({
                        answer: "Correcte",
-                       buttonClicked: false
+                       buttonClicked: false,
+                       points: this.state.points + 10,
                      })
                    }else{
                      // document.getElementById(["validation"+character.id]).innerHTML="Incorrecte"
                      this.setState({
                        answer: "Incorrecte",
-                       buttonClicked: false
+                       buttonClicked: false,
+                       points: this.state.points - 5,
                      })
                    }
                  }}
@@ -53,13 +56,15 @@ class Game1 extends Component {
                      // document.getElementById(["validation"+character.id]).innerHTML="Correcte"
                      this.setState({
                        answer: "Correcte",
-                       buttonClicked: false
+                       buttonClicked: false,
+                       points: this.state.points + 10,
                      })
                    }else{
                      // document.getElementById(["validation"+character.id]).innerHTML="Incorrecte"
                      this.setState({
                        answer: "Incorrecte",
-                       buttonClicked: false
+                       buttonClicked: false,
+                       points: this.state.points - 5,
                      })
                    }
 
@@ -73,13 +78,15 @@ class Game1 extends Component {
                      // document.getElementById(["validation"+character.id]).innerHTML="Correcte"
                      this.setState({
                        answer: "Correcte",
-                       buttonClicked: false
+                       buttonClicked: false,
+                       points: this.state.points + 10,
                      })
                    }else{
                      // document.getElementById(["validation"+character.id]).innerHTML="Incorrecte"
                      this.setState({
                        answer: "Incorrecte",
-                       buttonClicked: false
+                       buttonClicked: false,
+                       points: this.state.points - 5,
                      })
                    }
                  }}
