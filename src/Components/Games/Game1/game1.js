@@ -67,7 +67,7 @@ class Game1 extends Component {
         </div>
         :
         <div className="row">
-          <div className="col-4">
+          <div className="col">
             <h3>{this.state.currentIndex + 1}</h3>
             <h1>{character.name}</h1>
             <img src={character.image} alt={character.name} />
