@@ -8,21 +8,16 @@ import Game1 from './Components/Games/Game1/game1'
 import Game2 from './Components/Games/Game2/game2'
 
 class App extends Component {
-
-    //get all the propieties of the content
-
-    state = {
-      characters: [],
-      isLoaded: false,
-    }
+  state = {
+    characters: [],
+    pageIndex: Math.floor(Math.random() * 19) + 1,
+    isLoaded: false,
+  }
 
   componentDidMount() {
-    fetch('https://rickandmortyapi.com/api/character/?page=1')
+    fetch(`https://rickandmortyapi.com/api/character/?page=${this.state.pageIndex}`)
       .then(res => res.json())
       .then(json => {
-
-        // set the state, manipulate that items
-
           this.setState ({
             isLoaded: true,
             characters: json.results
@@ -47,7 +42,10 @@ class App extends Component {
                 path='/game1'
                 render={(props) => <Game1 {...props} characters={this.state.characters} />}
               />
-              <Route path="/game2" component={Game2} />
+              <Route
+                path='/game2'
+                render={(props) => <Game2 {...props} characters={this.state.characters} />}
+              />
               <Route exact path="/" render={() => (<Redirect to="/entry" />)} />
             </Switch>
           </BrowserRouter >
