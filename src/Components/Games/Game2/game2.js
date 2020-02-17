@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 
 
+
 class Game2 extends Component {
 
   constructor(props) {
@@ -17,8 +18,12 @@ class Game2 extends Component {
       points: 0,
       answer:"",
       attemptsCounter: 10,
-    }
+      play: false,
+    };
+    this.url = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
+    this.audio = new Audio(this.url)
   }
+
 
 
   componentDidMount() {
@@ -35,7 +40,18 @@ class Game2 extends Component {
             randomNumCharTwo: Math.floor(Math.random() * 350) + 1,
           })
       });
+      this.audio.addEventListener('ended', () => this.setState({ play: false }));
 
+  }
+
+  componentWillUnmount() {
+   this.audio.removeEventListener('ended', () => this.setState({ play: false }));
+  }
+
+  togglePlay = () => {
+    this.setState({ play: !this.state.play }, () => {
+      this.state.play ? this.audio.play() : this.audio.pause();
+    });
   }
 
   checkIfCorrect = event => {
@@ -63,10 +79,6 @@ class Game2 extends Component {
     window.location.reload();
   }
 
-  playAudio() {
-    const audioEl = document.getElementsByClassName("audio-element")[0]
-    audioEl.play()
-  }
 
 
   render() {
@@ -75,21 +87,20 @@ class Game2 extends Component {
         {this.state.attemptsCounter == 0
           ?
           <div>
+            <button onClick={this.togglePlay}>{this.state.play ? 'Pause' : 'Play'}</button>
+            <Button
+            type="button"
+            onClick = {this.tryAgain}>
+            Try Again</Button>
             <h1>Finish Game </h1>
             <h1>Points: {this.state.points} </h1>
-            <Button
-              type="button"
-              onClick = {this.tryAgain}>
-              Try Again</Button>
+
           </div>
           :
 
           <div className="container">
-          <button onClick={this.playAudio}>
-          Play</button>
-            <audio className="audio-element">
-              <source src="./show-me-what-you-got.mp3"></source>
-            </audio>
+
+
             <h2> Characters attempts : {this.state.attemptsCounter}</h2>
             {this.state.randomName == 1
             ?
