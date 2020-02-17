@@ -12,6 +12,7 @@ class App extends Component {
     characters: [],
     pageIndex: Math.floor(Math.random() * 19) + 1,
     isLoaded: false,
+    username: "",
   }
 
   componentDidMount() {
@@ -24,8 +25,12 @@ class App extends Component {
             characters: json.results
           })
       });
-    
+
   }
+
+  handleChange = (event) => {
+   this.setState({username: event.target.value});
+ }
 
   render() {
     if (this.state.isLoaded === false) {
@@ -38,7 +43,8 @@ class App extends Component {
           <div className="App">
           <BrowserRouter >
             <Switch>
-              <Route path="/entry" component={EntryPage} />
+              <Route path="/entry"
+                render={(props) => <EntryPage {...props} handleChange={this.handleChange} username={this.state.username}/>} />
               <Route path="/home" component={Home} />
               <Route
                 path='/game1'

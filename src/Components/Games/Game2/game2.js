@@ -4,6 +4,7 @@ import './game2.css'
 
 
 
+
 class Game2 extends Component {
 
   constructor(props) {
@@ -21,8 +22,8 @@ class Game2 extends Component {
       attemptsCounter: 10,
       play: false,
     };
-    this.url = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
-    this.audio = new Audio(this.url)
+    this.url = 'https://s19.aconvert.com/convert/p3r68-cdx67/6phwj-ib6x7.mp3';
+    this.audio = new Audio(this.url);
   }
 
 
