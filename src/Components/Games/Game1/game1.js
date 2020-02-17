@@ -5,7 +5,7 @@ class Game1 extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      character : this.props.characters[0],
+      character: this.props.characters[0],
       currentIndex: 0,
       points: 0,
       buttonClicked: false,
