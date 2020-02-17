@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
+import './game2.css'
 
 
 
@@ -83,11 +84,12 @@ class Game2 extends Component {
 
   render() {
     return (
-      <div>
+
+      <div className="content">
         {this.state.attemptsCounter == 0
           ?
           <div>
-            <button onClick={this.togglePlay}>{this.state.play ? 'Pause' : 'Play'}</button>
+
             <Button
             type="button"
             onClick = {this.tryAgain}>
@@ -101,6 +103,7 @@ class Game2 extends Component {
           <div className="container">
 
 
+            <Button onClick={this.togglePlay}>{this.state.play ? 'Pause' : 'Play'}</Button>
             <h2> Characters attempts : {this.state.attemptsCounter}</h2>
             {this.state.randomName == 1
             ?
