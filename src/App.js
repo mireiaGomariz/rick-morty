@@ -18,6 +18,7 @@ class App extends Component {
     fetch(`https://rickandmortyapi.com/api/character/?page=${this.state.pageIndex}`)
       .then(res => res.json())
       .then(json => {
+
           this.setState ({
             isLoaded: true,
             characters: json.results
