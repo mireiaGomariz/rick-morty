@@ -12,7 +12,7 @@ class EntryPage extends Component {
 
   render() {
     console.log(this.props);
-    if (this.props.username != "") {
+    if (this.props.userNameReady) {
       return <Redirect to={{ pathname: '/home', state: { username: this.props.username} }} />;
     }
     return (
@@ -23,14 +23,14 @@ class EntryPage extends Component {
             <Card style={{ width: '18rem' }}>
               <Card.Body>
                 <Card.Title>Enter your Name: </Card.Title>
-                <input
-                  value={this.props.username} onChange={this.props.handleChange}
-                  id= "username"
-                  type= "text"
-                />
-                <Button className="btn btn-danger mt-3"
-                type="button"
-                > Clickme </Button>
+                <form>
+                  <input
+                    value={this.props.usernameList} onChange={this.props.handleChange}
+                    id= "username"
+                    type= "text"
+                  />
+                  <Button onClick={this.props.test} className="btn btn-danger mt-3"> Clickme </Button>
+                </form>
               </Card.Body>
             </Card>
           </div>

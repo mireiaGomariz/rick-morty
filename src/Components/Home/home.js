@@ -13,11 +13,11 @@ class Home extends Component {
   render() {
     return (
     <div>
-      < Navbar />
+
       <div className="container">
         <Card className="row d-flex justify-content-end" style={{ width: '18rem' }}>
           <Card.Body>
-            <Card.Title> WELCOME </Card.Title>
+            <Card.Title><h3> WELCOME </h3></Card.Title>
             <Card.Text><h1>{this.state.username}</h1></Card.Text>
           </Card.Body>
         </Card>

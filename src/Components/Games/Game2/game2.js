@@ -22,8 +22,8 @@ class Game2 extends Component {
       attemptsCounter: 10,
       play: false,
     };
-    this.url = 'https://s19.aconvert.com/convert/p3r68-cdx67/6phwj-ib6x7.mp3';
-    this.audio = new Audio(this.url);
+    this.src = './show-me-what-you-got.mp3';
+    this.audio = new Audio(this.src);
   }
 
 

@@ -13,6 +13,8 @@ class App extends Component {
     pageIndex: Math.floor(Math.random() * 19) + 1,
     isLoaded: false,
     username: "",
+    userNameReady: false,
+    userNameList: [],
   }
 
   componentDidMount() {
@@ -32,6 +34,15 @@ class App extends Component {
    this.setState({username: event.target.value});
  }
 
+ handleSubmit = (event) => {
+   event.preventDefault();
+
+ }
+
+ test = () => {
+   this.setState({userNameReady: true})
+  }
+
   render() {
     if (this.state.isLoaded === false) {
       return <div> Loading...</div>;
@@ -44,7 +55,8 @@ class App extends Component {
           <BrowserRouter >
             <Switch>
               <Route path="/entry"
-                render={(props) => <EntryPage {...props} handleChange={this.handleChange} username={this.state.username}/>} />
+                render={(props) => <EntryPage {...props} handleSubmit={this.handleSubmit} userNameReady={this.state.userNameReady}
+                test={this.test} handleChange={this.handleChange} username={this.state.username}/>} />
               <Route path="/home" component={Home} />
               <Route
                 path='/game1'
