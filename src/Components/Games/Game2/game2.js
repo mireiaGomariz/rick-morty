@@ -3,8 +3,6 @@ import Button from 'react-bootstrap/Button';
 import './game2.css'
 
 
-
-
 class Game2 extends Component {
 
   constructor(props) {
@@ -22,8 +20,7 @@ class Game2 extends Component {
       attemptsCounter: 10,
       play: false,
     };
-    this.src = './show-me-what-you-got.mp3';
-    this.audio = new Audio(this.src);
+
   }
 
 
@@ -42,19 +39,10 @@ class Game2 extends Component {
             randomNumCharTwo: Math.floor(Math.random() * 350) + 1,
           })
       });
-      this.audio.addEventListener('ended', () => this.setState({ play: false }));
+
 
   }
 
-  componentWillUnmount() {
-   this.audio.removeEventListener('ended', () => this.setState({ play: false }));
-  }
-
-  togglePlay = () => {
-    this.setState({ play: !this.state.play }, () => {
-      this.state.play ? this.audio.play() : this.audio.pause();
-    });
-  }
 
   checkIfCorrect = event => {
 
@@ -84,6 +72,7 @@ class Game2 extends Component {
 
 
   render() {
+
     return (
 
       <div className="content">
@@ -103,8 +92,10 @@ class Game2 extends Component {
 
           <div className="container">
 
+            <div>
+            <audio ref="audio_tag" src="./show-me-what-you-got.mp3" autoPlay />
+            </div>
 
-            <Button onClick={this.togglePlay}>{this.state.play ? 'Pause' : 'Play'}</Button>
             <h2> Characters attempts : {this.state.attemptsCounter}</h2>
             {this.state.randomName == 1
             ?
