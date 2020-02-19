@@ -26,14 +26,14 @@ class Home extends Component {
           <Card>
             <Card.Body>
               <Card.Title> GAME #1 </Card.Title>
-              <Button href="/game1"> Game 1</Button>
+              <Button href="/instructions1"> Game 1</Button>
             </Card.Body>
           </Card>
 
           <Card>
             <Card.Body>
               <Card.Title> GAME #2 </Card.Title>
-              <Button href="/game2"> Game 2</Button>
+              <Button href="/instructions2"> Game 2</Button>
             </Card.Body>
           </Card>
         </div>

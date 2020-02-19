@@ -93,9 +93,8 @@ class Game2 extends Component {
           <div className="container">
 
             <div>
-            <audio ref="audio_tag" src="./show-me-what-you-got.mp3" autoPlay />
+              <audio ref="audio_tag" src="./show-me-what-you-got.mp3" autoPlay />
             </div>
-
             <h2> Characters attempts : {this.state.attemptsCounter}</h2>
             {this.state.randomName == 1
             ?
