@@ -39,10 +39,7 @@ class Game2 extends Component {
             randomNumCharTwo: Math.floor(Math.random() * 350) + 1,
           })
       });
-
-
   }
-
 
   checkIfCorrect = event => {
 
@@ -69,13 +66,11 @@ class Game2 extends Component {
     window.location.reload();
   }
 
-
-
   render() {
 
     return (
 
-      <div className="content">
+      <div className="game2Content">
         {this.state.attemptsCounter == 0
           ?
           <div>
@@ -86,12 +81,9 @@ class Game2 extends Component {
             Try Again</Button>
             <h1>Finish Game </h1>
             <h1>Points: {this.state.points} </h1>
-
           </div>
           :
-
           <div className="container">
-
             <div>
               <audio ref="audio_tag" src="./show-me-what-you-got.mp3" autoPlay />
             </div>
@@ -120,8 +112,6 @@ class Game2 extends Component {
           </div>
         }
       </div>
-
-
     )
 
 
