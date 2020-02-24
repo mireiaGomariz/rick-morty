@@ -1,0 +1,18 @@
+.hello-g2 {
+    font-family: Get Schwifty;
+    font-size: 100px;
+             -webkit-text-fill-color:rgb(37, 253, 17);
+             -webkit-text-stroke:3px;
+             -webkit-text-stroke-color:black;
+    
+}
+.fondo-instr-diseño {
+    width: 100vw;
+    height: 100vh;
+    -webkit-backdrop-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-image: url('diseño_fondo.png');
+    background-repeat: no-repeat;
+}

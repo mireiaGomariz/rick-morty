@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from 'react-bootstrap/Button';
+
 
 class Game1 extends Component {
   constructor(props) {
@@ -60,10 +60,10 @@ class Game1 extends Component {
         ?
         <div>
           <h1>Points: {this.state.points} / {this.props.characters.length}</h1>
-          <Button
+          <button
           type="button"
           onClick = {this.tryAgain}
-          >Try Again</Button>
+          >Try Again</button>
         </div>
         :
         <div className="row">
@@ -75,27 +75,27 @@ class Game1 extends Component {
               ?
               <div>
               <h2>{this.state.answer}</h2>
-              <Button
+              <button
                 type="button"
                 onClick = {this.nextButton}>
-                NEXT</Button>
+                NEXT</button>
               </div>
               :
               <div id={["buttons"+character.id]} className="row">
                 <div className="col mt-2 mb-4">
                   <div>
-                    <Button className="ml-2 btn btn-info"
+                    <button className="ml-2 btn"
                      type="button"
                      onClick = {this.checkIfAliveOrDead}
-                    >Alive</Button>
-                    <Button className="ml-2 btn btn-danger"
+                    >Alive</button>
+                    <button className="ml-2 btn"
                      type="button"
                      onClick = {this.checkIfAliveOrDead}
-                    >Dead</Button>
-                    <Button className="ml-2 btn btn-warning"
+                    >Dead</button>
+                    <button className="ml-2 btn "
                      type="button"
                      onClick = {this.checkIfAliveOrDead}
-                    >Unknown</Button>
+                    >Unknown</button>
                   </div>
                 </div>
               </div>
