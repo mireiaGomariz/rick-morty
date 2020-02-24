@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
+import './instructions1.css';
+
 
 
 class Instructions1 extends Component {
@@ -12,7 +14,7 @@ class Instructions1 extends Component {
     return (
       <div>
         <h1> Hello </h1>
-        <Button href="/game1"> Game 1</Button>
+        <Button bsPrefix="button-colored" href="/game1"> Game 1</Button>
       </div>
     )
   }
