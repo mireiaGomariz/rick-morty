@@ -1,14 +1,25 @@
-
-
-
-
+.homewelcome {
+  text-align: center;
+  font-family: Get Schwifty;
+    font-size: 100px;
+             -webkit-text-fill-color:rgb(53, 215, 255);
+             -webkit-text-stroke:4px;
+             -webkit-text-stroke-color: hsl(0, 0%, 2%);
+}  
+.namewel {
+  text-align: center;
+  font-family: Get Schwifty;
+  font-size: 70px;
+           -webkit-text-fill-color: hsl(113, 97%, 58%);
+           -webkit-text-stroke:2px;
+           -webkit-text-stroke-color: hsl(0, 0%, 2%);
+}
 
 .homeContainer {
-  /* display: inline-flex; */
-  /* background-image: url('./background4.jpeg'); */
+
   height: 100vh;
   width: 95%;
-  position: absolute;
+  position:;
   z-index: 1;
   right: 0;
 

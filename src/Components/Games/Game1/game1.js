@@ -1,5 +1,45 @@
 import React, { Component } from 'react';
-import Button from 'react-bootstrap/Button';
+
+
+function getFinalResultOfCharacter(points){
+  if (points < 3) {
+    return (
+      <div>
+        <h1> You are Jerry! </h1>
+        <img src="https://i1.pngguru.com/preview/327/87/691/rick-and-morty-hq-resource-rick-and-morty-character-raising-both-hands-illustration-png-clipart.jpg"/>
+      </div>
+    )
+  } else if (points < 5) {
+    return (
+      <div>
+        <h1> You are Morty! </h1>
+        <img src="https://i1.pngguru.com/preview/327/87/691/rick-and-morty-hq-resource-rick-and-morty-character-raising-both-hands-illustration-png-clipart.jpg"/>
+      </div>
+    )
+  }else if (points < 7) {
+    return (
+      <div>
+        <h1> You are Beth! </h1>
+        <img src="https://i1.pngguru.com/preview/327/87/691/rick-and-morty-hq-resource-rick-and-morty-character-raising-both-hands-illustration-png-clipart.jpg"/>
+      </div>
+    )
+  }else if (points < 9) {
+    return (
+      <div>
+        <h1> You are Summer! </h1>
+        <img src="https://i1.pngguru.com/preview/327/87/691/rick-and-morty-hq-resource-rick-and-morty-character-raising-both-hands-illustration-png-clipart.jpg"/>
+      </div>
+    )
+  }else if (points = 10) {
+    return (
+      <div>
+        <h1> Congratulations you are Rick! </h1>
+        <img src="https://i1.pngguru.com/preview/327/87/691/rick-and-morty-hq-resource-rick-and-morty-character-raising-both-hands-illustration-png-clipart.jpg"/>
+      </div>
+    )
+  }
+
+}
 
 class Game1 extends Component {
   constructor(props) {
@@ -13,6 +53,8 @@ class Game1 extends Component {
       isFinish: false,
     }
   }
+
+
 
   checkIfAliveOrDead = event => {
 
@@ -59,11 +101,13 @@ class Game1 extends Component {
       {this.state.isFinish
         ?
         <div>
+        {getFinalResultOfCharacter(this.state.points)}
+
           <h1>Points: {this.state.points} / {this.props.characters.length}</h1>
-          <Button
+          <button
           type="button"
           onClick = {this.tryAgain}
-          >Try Again</Button>
+          >Try Again</button>
         </div>
         :
         <div className="row">
@@ -75,27 +119,27 @@ class Game1 extends Component {
               ?
               <div>
               <h2>{this.state.answer}</h2>
-              <Button
+              <button
                 type="button"
                 onClick = {this.nextButton}>
-                NEXT</Button>
+                NEXT</button>
               </div>
               :
               <div id={["buttons"+character.id]} className="row">
                 <div className="col mt-2 mb-4">
                   <div>
-                    <Button className="ml-2 btn btn-info"
+                    <button className="ml-2 btn"
                      type="button"
                      onClick = {this.checkIfAliveOrDead}
-                    >Alive</Button>
-                    <Button className="ml-2 btn btn-danger"
+                    >Alive</button>
+                    <button className="ml-2 btn"
                      type="button"
                      onClick = {this.checkIfAliveOrDead}
-                    >Dead</Button>
-                    <Button className="ml-2 btn btn-warning"
+                    >Dead</button>
+                    <button className="ml-2 btn "
                      type="button"
                      onClick = {this.checkIfAliveOrDead}
-                    >Unknown</Button>
+                    >Unknown</button>
                   </div>
                 </div>
               </div>
