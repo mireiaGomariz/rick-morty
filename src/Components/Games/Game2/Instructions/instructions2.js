@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import Button from 'react-bootstrap/Button';
+import './instructions2.css';
+import {Link} from 'react-router-dom';
+
 
 
 class Instructions2 extends Component {
@@ -11,8 +13,10 @@ class Instructions2 extends Component {
   render() {
     return (
       <div>
-        <h1> Hello </h1>
-        <Button href="/game2"> Game 2</Button>
+        <div className="fondo-instr-diseño">
+          <h1 className="hello-g2"> Get Schwifty </h1>
+          <button href="/game2"><Link to="/game2">Game 2</Link></button>
+        </div>
       </div>
     )
   }
