@@ -1,5 +1,4 @@
 import React , { Component } from 'react';
-import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 
@@ -13,29 +12,16 @@ class Home extends Component {
   render() {
     return (
     <div>
-
+    
       <div className="container">
-        <Card className="row d-flex justify-content-end" style={{ width: '18rem' }}>
-          <Card.Body>
-            <Card.Title><h3 className="homewelcome"> WELCOME </h3></Card.Title>
-            <Card.Text><h1 className="namewel">{this.state.username}</h1></Card.Text>
-          </Card.Body>
-        </Card>
+
+            <h3 className="homewelcome"> WELCOME </h3>
+            <h1 className="namewel">{this.state.username}</h1>
+
       </div>
         <div className="homeContainer">
-          <Card>
-            <Card.Body>
-              <Card.Title> GAME #1 </Card.Title>
-              <Button href="/instructions1"> Game 1</Button>
-            </Card.Body>
-          </Card>
-
-          <Card>
-            <Card.Body>
-              <Card.Title> GAME #2 </Card.Title>
-              <Button href="/instructions2"> Game 2</Button>
-            </Card.Body>
-          </Card>
+              <Button bsPrefix="game1" href="/instructions1"> Game 1</Button>
+              <Button bsPrefix="game2" href="/instructions2"> Game 2</Button>
         </div>
       </div>
     )

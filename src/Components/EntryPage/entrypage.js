@@ -16,7 +16,11 @@ class EntryPage extends Component {
       return <Redirect to={{ pathname: '/home', state: { username: this.props.username} }} />;
     }
     return (
+
       <div className="gif">
+      <div>
+        <audio ref="audio_tag" src="./rick-and-morty-theme-song-hd.mp3" autoPlay />
+      </div>
         <div className="container">
           <div className="row justify-content-end ml-3">{this.props.username}</div>
           <div className="row d-flex justify-content-center cardEntry">
