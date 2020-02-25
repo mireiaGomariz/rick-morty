@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import  './instructions1.css';
-import image1 from './fondo-run-dialogo.png';
-import image2 from './fondo-run-dialogo2.png';
 import {Link} from 'react-router-dom';
+
 
 
 
@@ -17,7 +16,6 @@ class Instructions1 extends Component {
 
   componentDidMount(){
     let self = this
-    let images = [image1, image2];
     setTimeout(function(){
       // var url = images;
       // var background = document.getElementById('image').style.backgroundImage = 'url('+image2+')'

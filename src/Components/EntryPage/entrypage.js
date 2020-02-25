@@ -1,7 +1,6 @@
 
 import React , { Component } from 'react';
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import './entrypage.css';
 import { Redirect } from 'react-router';
 
@@ -28,7 +27,7 @@ class EntryPage extends Component {
                     id= "username"
                     type= "text"
                   />
-                  <Button onClick={this.props.test} bsPrefix="entryButton"> Clickme </Button>
+                  <Button onClick={this.props.checkUserReady} bsPrefix="entryButton"> Clickme </Button>
                 </form>
 
           </div>
