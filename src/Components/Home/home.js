@@ -9,14 +9,20 @@ class Home extends Component {
   }
   render() {
     return (
-    <div>
+    <div className="home-menu">
       <div className="container">
             <h3 className="homewelcome"> WELCOME </h3>
             <h1 className="namewel">{this.state.username}</h1>
       </div>
         <div className="homeContainer">
-              <Button bsPrefix="game1" href="/instructions1"> Game 1</Button>
-              <Button bsPrefix="game2" href="/instructions2"> Game 2</Button>
+          <a href="/instructions1">
+            <img className="grilla1" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
+          </a>
+          <a href="/instructions2">
+          <img className="grilla2" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
+          </a>
+              <Button  bsPrefix="game1" href="/instructions1"> Game 1</Button>
+              <Button  bsPrefix="game2" href="/instructions2"> Game 2</Button>
         </div>
       </div>
     )

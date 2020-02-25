@@ -1,5 +1,12 @@
-
-
+.home-menu {
+    width: ;
+    height:100vh ;
+    -webkit-backdrop-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-image: url('./garage.jpg');
+}
 .homewelcome {
   text-align: center;
   font-family: Get Schwifty;
@@ -25,6 +32,17 @@
   z-index: 1;
   right: 0;
   font-family: Get Schwifty;
-
-
 }
+
+.grilla1 {
+  width: 400px;
+  height: 400px;
+  
+}
+
+.grilla2 {
+  width: 400px;
+  height: 400px;
+  margin-left: 450px;
+}
+
