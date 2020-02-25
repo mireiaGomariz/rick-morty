@@ -112,7 +112,7 @@ class Game1 extends Component {
     let {character} = this.state
     return (
       <div>
-      {!this.state.isFinish
+      {this.state.isFinish
         ?
         <div>
         {getFinalResultOfCharacter(this.state.points)}
