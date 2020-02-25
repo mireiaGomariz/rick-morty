@@ -11,7 +11,6 @@ import { Redirect } from 'react-router';
 class EntryPage extends Component {
 
   render() {
-    console.log(this.props);
     if (this.props.userNameReady) {
       return <Redirect to={{ pathname: '/home', state: { username: this.props.username} }} />;
     }
@@ -24,19 +23,17 @@ class EntryPage extends Component {
         <div className="container">
           <div className="row justify-content-end ml-3">{this.props.username}</div>
           <div className="row d-flex justify-content-center cardEntry">
-            <Card style={{ width: '18rem' }}>
-              <Card.Body>
-                <Card.Title>Enter your Name: </Card.Title>
+
+                <h3>Enter your Name: </h3>
                 <form>
                   <input
                     value={this.props.usernameList} onChange={this.props.handleChange}
                     id= "username"
                     type= "text"
                   />
-                  <Button onClick={this.props.test} className="btn btn-danger mt-3"> Clickme </Button>
+                  <Button onClick={this.props.test} bsPrefix="entryButton"> Clickme </Button>
                 </form>
-              </Card.Body>
-            </Card>
+
           </div>
         </div>
       </div>
