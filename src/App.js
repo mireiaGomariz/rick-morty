@@ -16,7 +16,6 @@ class App extends Component {
     isLoaded: false,
     username: "",
     userNameReady: false,
-    userNameList: [],
   }
 
   componentDidMount() {
@@ -41,7 +40,7 @@ class App extends Component {
 
  }
 
- test = () => {
+ checkUserReady = () => {
    this.setState({userNameReady: true})
   }
 
@@ -58,17 +57,23 @@ class App extends Component {
             <Switch>
               <Route path="/entry"
                 render={(props) => <EntryPage {...props} handleSubmit={this.handleSubmit} userNameReady={this.state.userNameReady}
-                test={this.test} handleChange={this.handleChange} username={this.state.username}/>} />
+                checkUserReady={this.checkUserReady} handleChange={this.handleChange} username={this.state.username}/>} />
               <Route path="/home" component={Home} />
               <Route
                 path='/game1'
                 render={(props) => <Game1 {...props} characters={this.state.characters} />}
               />
-              <Route path="/instructions1" component={Instructions1} />
-              <Route path="/instructions2" component={Instructions2} />
+              <Route
+                path="/instructions1"
+                render={(props) => <Instructions1 {...props} username={this.state.username}/>}
+              />
+              <Route
+                path="/instructions2"
+                render={(props) => <Instructions2 {...props} username={this.state.username} test={'test'}/>}
+              />
               <Route
                 path='/game2'
-                render={(props) => <Game2 {...props} characters={this.state.characters} />}
+                render={(props) => <Game2 {...props} characters={this.state.characters} username={this.state.username} />}
               />
               <Route exact path="/" render={() => (<Redirect to="/entry" />)} />
             </Switch>

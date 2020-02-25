@@ -19,6 +19,7 @@ class Game2 extends Component {
       answer:"",
       attemptsCounter: 10,
       play: false,
+      username: this.props.location.username
     };
 
   }
@@ -71,7 +72,7 @@ class Game2 extends Component {
     return (
 
       <div className="game2Content">
-        {this.state.attemptsCounter == 0
+        {this.state.attemptsCounter === 0
           ?
           <div>
 
@@ -81,6 +82,8 @@ class Game2 extends Component {
             Try Again</Button>
             <h1>Finish Game </h1>
             <h1>Points: {this.state.points} </h1>
+            <h1>Name: {this.state.username} </h1>
+
           </div>
           :
           <div className="container">
@@ -88,7 +91,7 @@ class Game2 extends Component {
               <audio ref="audio_tag" src="./show-me-what-you-got.mp3" autoPlay />
             </div>
             <h2> Characters attempts : {this.state.attemptsCounter}</h2>
-            {this.state.randomName == 1
+            {this.state.randomName === 1
             ?
             <h1 id="select-character" className="mt-5">{this.state.characterOne.name}</h1>
             :
@@ -106,6 +109,7 @@ class Game2 extends Component {
             </div>
             <div className="row">
               <div className="col">
+
                 <h1>Points: {this.state.points} </h1>
               </div>
             </div>

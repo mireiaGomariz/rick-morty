@@ -5,7 +5,7 @@ import Rick from './rick.png';
 import Summer from './summer.png';
 import Beth from './beth.png';
 
-var imagesPoints= [Jerry, Morty, Summer, Rick];
+var imagesPoints= [Jerry, Morty, Summer, Rick, Beth];
 
 
 function getFinalResultOfCharacter(points){
@@ -13,7 +13,7 @@ function getFinalResultOfCharacter(points){
     return (
       <div>
         <h1> You are Jerry! </h1>
-        <img src={imagesPoints[0]}/>
+        <img src={imagesPoints[0]} alt="jerry smith"/>
         <h3>"Life is effort and i'll stop when I die!"</h3>
 
       </div>
@@ -22,7 +22,7 @@ function getFinalResultOfCharacter(points){
     return (
       <div>
         <h1> You are Morty! </h1>
-        <img src={imagesPoints[1]}/>
+        <img src={imagesPoints[1]} alt="Morty"/>
         <h3>"Nobody exists on propouse. nobody belongs anywhere. everybody's gonna die. Come watch tv?"</h3>
       </div>
     )
@@ -30,7 +30,7 @@ function getFinalResultOfCharacter(points){
     return (
       <div>
         <h1> You are Beth! </h1>
-        <img src={imagesPoints[2]}/>
+        <img src={imagesPoints[5]} alt="Beth"/>
         <h3>"let's save the measuring for when our dicks are out it's time to save a life!"</h3>
       </div>
     )
@@ -38,7 +38,7 @@ function getFinalResultOfCharacter(points){
     return (
       <div>
         <h1> You are Summer! </h1>
-        <img src={imagesPoints[2]}/>
+        <img src={imagesPoints[2]} alt="Summer"/>
         <h3>"All I have are pictures are of me and my friends from school. What? What teenage girl has pictures of her family? It's not like we're Mormon or dying"</h3>
 
       </div>
@@ -47,7 +47,7 @@ function getFinalResultOfCharacter(points){
     return (
       <div>
         <h1> Congratulations you are Rick! </h1>
-        <img src={imagesPoints[3]}/>
+        <img src={imagesPoints[3]} alt="Rick"/>
         <h3>"To live is to risk it all; otherwise you're just an inert chunk of randomly assembled molecules drifting wherever the universe blows you..."</h3>
       </div>
     )
