@@ -10,12 +10,9 @@ class Home extends Component {
   render() {
     return (
     <div>
-
       <div className="container">
-
             <h3 className="homewelcome"> WELCOME </h3>
             <h1 className="namewel">{this.state.username}</h1>
-
       </div>
         <div className="homeContainer">
               <Button bsPrefix="game1" href="/instructions1"> Game 1</Button>

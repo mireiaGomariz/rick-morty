@@ -17,7 +17,7 @@ class Instructions1 extends Component {
     let images = [image1, image2];
     setTimeout(function(){
       var url = images;
-      document.getElementById('image').style.backgroundImage = 'url('+image2+')';
+      var background = document.getElementById('image').style.backgroundImage = 'url('+image2+')';
     },5000);
 
   }
@@ -27,10 +27,10 @@ class Instructions1 extends Component {
     return (
       <div>
         <div className="image" id="image">
-              <h1 className="hinst-1"> Hello </h1>
-            <div className="">
-              <button href="/game1"><Link to="/game1">Game 1</Link></button>
-            </div>
+              <h1 className="hinst-1"> {`It's Alive? `}</h1>
+        </div>
+        <div className="">
+          <button href="/game1"><Link to="/game1">Game 1</Link></button>
         </div>
       </div>
     )
