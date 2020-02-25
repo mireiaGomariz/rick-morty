@@ -93,7 +93,7 @@ class Game2 extends Component {
             <h2> Characters attempts : {this.state.attemptsCounter}</h2>
             {this.state.randomName === 1
             ?
-            <h1 id="select-character" className="mt-5">{this.state.characterOne.name}</h1>
+            <h1 id="select-character"  className="mt-5">{this.state.characterOne.name}</h1>
             :
             <h1 id="select-character" className="mt-5">{this.state.characterTwo.name}</h1>
             }
@@ -109,8 +109,7 @@ class Game2 extends Component {
             </div>
             <div className="row">
               <div className="col">
-
-                <h1>Points: {this.state.points} </h1>
+                <h1 className="point-text2">Points: {this.state.points} </h1>
               </div>
             </div>
           </div>

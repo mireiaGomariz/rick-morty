@@ -1,4 +1,23 @@
 .game2Content {
     height: 100vh;
-    background: url("https://c.wallhere.com/photos/46/e3/Rick_and_Morty-104703.jpg!d");
+    background-position: center;
+    -webkit-backdrop-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-image: url("./cabezota-one.jpg");
+}
+
+.titel-name-2 {
+    -webkit-text-fill-color: hsl(320, 91%, 55%);
+           -webkit-text-stroke:1px;
+           -webkit-text-stroke-color: hsl(115, 98%, 49%);
+}
+
+.point-text2{
+    font-family: Get Schwifty;
+    font-size: 70px;
+           -webkit-text-fill-color: hsl(66, 96%, 53%);
+           -webkit-text-stroke:1px;
+           -webkit-text-stroke-color:hsl(182, 94%, 56%);
 }

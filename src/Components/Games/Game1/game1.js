@@ -4,6 +4,7 @@ import Morty from './morty.png';
 import Rick from './rick.png';
 import Summer from './summer.png';
 import Beth from './beth.png';
+import './game1.css'
 
 var imagesPoints= [Jerry, Morty, Summer, Rick, Beth];
 
@@ -111,60 +112,61 @@ class Game1 extends Component {
   render() {
     let {character} = this.state
     return (
-      <div>
-      {this.state.isFinish
-        ?
-        <div>
-        {getFinalResultOfCharacter(this.state.points)}
-
-          <h1>Points: {this.state.points} / {this.props.characters.length}</h1>
-          <button
-          type="button"
-          onClick = {this.tryAgain}
-          >Try Again</button>
-        </div>
-        :
-        <div className="row">
-          <div className="col">
-            <h3>{this.state.currentIndex + 1}</h3>
-            <h1>{character.name}</h1>
-            <img src={character.image} alt={character.name} />
-            {this.state.buttonClicked
-              ?
+      <div className= "fondo-game1-1">
               <div>
-              <h2>{this.state.answer}</h2>
-              <button
-                type="button"
-                onClick = {this.nextButton}>
-                NEXT</button>
-              </div>
-              :
-              <div id={["buttons"+character.id]} className="row">
-                <div className="col mt-2 mb-4">
-                  <div>
-                    <button className="ml-2 btn"
-                     type="button"
-                     onClick = {this.checkIfAliveOrDead}
-                    >Alive</button>
-                    <button className="ml-2 btn"
-                     type="button"
-                     onClick = {this.checkIfAliveOrDead}
-                    >Dead</button>
-                    <button className="ml-2 btn "
-                     type="button"
-                     onClick = {this.checkIfAliveOrDead}
-                    >Unknown</button>
-                  </div>
+              {this.state.isFinish
+                ?
+                <div>
+                {getFinalResultOfCharacter(this.state.points)}
+
+                  <h1>Points: {this.state.points} / {this.props.characters.length}</h1>
+                  <button
+                  type="button"
+                  onClick = {this.tryAgain}
+                  >Try Again</button>
+                </div>
+                :
+                <div className="row">
+                  <div className="col">
+                    <h3 className="titel-name-1">{this.state.currentIndex + 1}</h3>
+                    <h1 className="titel-name-1">{character.name}</h1>
+                    <img src={character.image} alt={character.name} />
+                    {this.state.buttonClicked
+                      ?
+                      <div>
+                      <h2>{this.state.answer}</h2>
+                      <button
+                        type="button"
+                        onClick = {this.nextButton}>
+                        NEXT</button>
+                      </div>
+                      :
+                      <div id={["buttons"+character.id]} className="row">
+                        <div className="col mt-2 mb-4">
+                          <div className="boton-3">
+                            <button className="ml-2 btn"
+                            type="button"
+                            onClick = {this.checkIfAliveOrDead}
+                            >Alive</button>
+                            <button className="ml-2 btn"
+                            type="button"
+                            onClick = {this.checkIfAliveOrDead}
+                            >Dead</button>
+                            <button className="ml-2 btn "
+                            type="button"
+                            onClick = {this.checkIfAliveOrDead}
+                            >Unknown</button>
+                          </div>
+                        </div>
+                      </div>
+                  }
+                  <h1 id={["validation"+character.id]} value=""></h1>
+                  <h1 className="point-text1" >Points: {this.state.points} / {this.props.characters.length}</h1>
                 </div>
               </div>
-          }
-          <h1 id={["validation"+character.id]} value=""></h1>
-          <h1>Points: {this.state.points} / {this.props.characters.length}</h1>
-        </div>
+              }
+              </div>
       </div>
-      }
-      </div>
-
     )
   }
 }
