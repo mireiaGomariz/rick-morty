@@ -14,6 +14,7 @@ function getFinalResultOfCharacter(points){
       <div>
         <h1> You are Jerry! </h1>
         <img src={imagesPoints[0]}/>
+        <h3>"Life is effort and i'll stop when I die!"</h3>
 
       </div>
     )
@@ -22,6 +23,7 @@ function getFinalResultOfCharacter(points){
       <div>
         <h1> You are Morty! </h1>
         <img src={imagesPoints[1]}/>
+        <h3>"Nobody exists on propouse. nobody belongs anywhere. everybody's gonna die. Come watch tv?"</h3>
       </div>
     )
   }else if (points < 12) {
@@ -29,7 +31,7 @@ function getFinalResultOfCharacter(points){
       <div>
         <h1> You are Beth! </h1>
         <img src={imagesPoints[2]}/>
-
+        <h3>"let's save the measuring for when our dicks are out it's time to save a life!"</h3>
       </div>
     )
   }else if (points < 18) {
@@ -37,6 +39,8 @@ function getFinalResultOfCharacter(points){
       <div>
         <h1> You are Summer! </h1>
         <img src={imagesPoints[2]}/>
+        <h3>"All I have are pictures are of me and my friends from school. What? What teenage girl has pictures of her family? It's not like we're Mormon or dying"</h3>
+
       </div>
     )
   }else if (points > 18) {
@@ -44,6 +48,7 @@ function getFinalResultOfCharacter(points){
       <div>
         <h1> Congratulations you are Rick! </h1>
         <img src={imagesPoints[3]}/>
+        <h3>"To live is to risk it all; otherwise you're just an inert chunk of randomly assembled molecules drifting wherever the universe blows you..."</h3>
       </div>
     )
   }
@@ -107,7 +112,7 @@ class Game1 extends Component {
     let {character} = this.state
     return (
       <div>
-      {this.state.isFinish
+      {!this.state.isFinish
         ?
         <div>
         {getFinalResultOfCharacter(this.state.points)}
