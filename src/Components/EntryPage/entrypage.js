@@ -5,8 +5,6 @@ import Card from 'react-bootstrap/Card';
 import './entrypage.css';
 import { Redirect } from 'react-router';
 
-//app js "",
-//app js metode setState cambiar valor
 
 class EntryPage extends Component {
 
@@ -23,7 +21,6 @@ class EntryPage extends Component {
         <div className="container">
           <div className="row justify-content-end ml-3">{this.props.username}</div>
           <div className="row d-flex justify-content-center cardEntry">
-
                 <h3>Enter your Name: </h3>
                 <form>
                   <input
