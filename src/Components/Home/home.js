@@ -1,7 +1,5 @@
 import React , { Component } from 'react';
 import Button from 'react-bootstrap/Button';
-
-
 import './home.css';
 
 class Home extends Component {
@@ -12,7 +10,7 @@ class Home extends Component {
   render() {
     return (
     <div>
-    
+
       <div className="container">
 
             <h3 className="homewelcome"> WELCOME </h3>

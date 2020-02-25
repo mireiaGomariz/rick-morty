@@ -1,40 +1,49 @@
 import React, { Component } from 'react';
+import Jerry from './jerry.png';
+import Morty from './morty.png';
+import Rick from './rick.png';
+import Summer from './summer.png';
+import Beth from './beth.png';
+
+var imagesPoints= [Jerry, Morty, Summer, Rick];
 
 
 function getFinalResultOfCharacter(points){
-  if (points < 3) {
+  if (points < 5) {
     return (
       <div>
         <h1> You are Jerry! </h1>
-        <img src="https://i1.pngguru.com/preview/327/87/691/rick-and-morty-hq-resource-rick-and-morty-character-raising-both-hands-illustration-png-clipart.jpg"/>
+        <img src={imagesPoints[0]}/>
+
       </div>
     )
-  } else if (points < 5) {
+  } else if (points < 8) {
     return (
       <div>
         <h1> You are Morty! </h1>
-        <img src="https://i1.pngguru.com/preview/327/87/691/rick-and-morty-hq-resource-rick-and-morty-character-raising-both-hands-illustration-png-clipart.jpg"/>
+        <img src={imagesPoints[1]}/>
       </div>
     )
-  }else if (points < 7) {
+  }else if (points < 12) {
     return (
       <div>
         <h1> You are Beth! </h1>
-        <img src="https://i1.pngguru.com/preview/327/87/691/rick-and-morty-hq-resource-rick-and-morty-character-raising-both-hands-illustration-png-clipart.jpg"/>
+        <img src={imagesPoints[2]}/>
+
       </div>
     )
-  }else if (points < 9) {
+  }else if (points < 18) {
     return (
       <div>
         <h1> You are Summer! </h1>
-        <img src="https://i1.pngguru.com/preview/327/87/691/rick-and-morty-hq-resource-rick-and-morty-character-raising-both-hands-illustration-png-clipart.jpg"/>
+        <img src={imagesPoints[2]}/>
       </div>
     )
-  }else if (points = 10) {
+  }else if (points > 18) {
     return (
       <div>
         <h1> Congratulations you are Rick! </h1>
-        <img src="https://i1.pngguru.com/preview/327/87/691/rick-and-morty-hq-resource-rick-and-morty-character-raising-both-hands-illustration-png-clipart.jpg"/>
+        <img src={imagesPoints[3]}/>
       </div>
     )
   }
