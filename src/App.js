@@ -8,13 +8,12 @@ import Game2 from './Components/Games/Game2/game2';
 import Instructions1 from './Components/Games/Game1/Instructions/instructions1';
 import Instructions2 from './Components/Games/Game2/Instructions/instructions2';
 
-
+const username = "";
 class App extends Component {
   state = {
     characters: [],
     pageIndex: Math.floor(Math.random() * 19) + 1,
     // isLoaded: false,
-    username: "",
     userNameReady: false,
     error: ""
   }
@@ -49,7 +48,7 @@ class App extends Component {
   }
 
   handleChange = (event) => {
-   this.setState({username: event.target.value});
+   this.username = event.target.value;
  }
 
  handleSubmit = (event) => {
@@ -77,7 +76,7 @@ class App extends Component {
               <Switch>
                 <Route path="/entry"
                   render={(props) => <EntryPage {...props} handleSubmit={this.handleSubmit} userNameReady={this.state.userNameReady}
-                  checkUserReady={this.checkUserReady} handleChange={this.handleChange} username={this.state.username}/>} />
+                  checkUserReady={this.checkUserReady} handleChange={this.handleChange} username={this.username}/>} />
                 <Route path="/home" component={Home} />
                 <Route
                   path='/game1'

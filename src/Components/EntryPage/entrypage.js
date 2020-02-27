@@ -20,7 +20,6 @@ class EntryPage extends Component {
         <Sound
         url="/rick-and-morty-theme-song-hd.mp3"
         playStatus={Sound.status.PLAYING}
-        playFromPosition={500 /* in milliseconds */}
         autoLoad
         />
       </div>

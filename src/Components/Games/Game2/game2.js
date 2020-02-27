@@ -7,6 +7,8 @@ import Rick from './rick.png';
 import Summer from './summer.png';
 import Beth from './beth.png';
 import Sound from 'react-sound';
+import sound2 from './rick-and-morty-theme-song-hd.mp3';
+
 
 
 var imagesPoints= [Jerry, Morty, Summer, Rick, Beth];
@@ -137,7 +139,6 @@ class Game2 extends Component {
             Try Again</Button>
             <h1>Finish Game </h1>
             <h1>Points: {this.state.points} </h1>
-            <h1>Name: {this.state.username} </h1>
             <button href="/home">Back to Home</button>
 
           </div>
@@ -145,9 +146,10 @@ class Game2 extends Component {
           <div className="container">
             <div>
               <Sound
-              url="./show-me-what-you-got.mp3"
+              url="./rick-and-morty-theme-song-hd"
               playStatus={Sound.status.PLAYING}
               playFromPosition={300 /* in milliseconds */}
+              autoLoad
               />
             </div>
             <h2> Characters attempts : {this.state.attemptsCounter}</h2>
