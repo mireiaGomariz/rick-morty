@@ -18,11 +18,9 @@
     background-repeat: no-repeat;
 }
 
-.instructions {
-  animation: fadeout 1s;
-}
+
 .instructions1 {
-  animation:  fadein 1s fadeout 1s;
+  animation:  fadein 1s;
 }
 .instructions2 {
   animation: fadein 1s;
@@ -31,9 +29,4 @@
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
-}
-
-.instructions3 {
-  animation: fadein 2s;
-
 }
