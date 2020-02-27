@@ -4,6 +4,8 @@ import Morty from './morty.png';
 import Rick from './rick.png';
 import Summer from './summer.png';
 import Beth from './beth.png';
+import Button from 'react-bootstrap/Button';
+
 import './game1.css'
 
 var imagesPoints= [Jerry, Morty, Summer, Rick, Beth];
@@ -114,7 +116,7 @@ class Game1 extends Component {
     return (
       <div className= "fondo-game1-1">
               <div>
-              {this.state.isFinish
+              {!this.state.isFinish
                 ?
                 <div>
                 {getFinalResultOfCharacter(this.state.points)}
@@ -124,6 +126,7 @@ class Game1 extends Component {
                   type="button"
                   onClick = {this.tryAgain}
                   >Try Again</button>
+                  <Button  bsPrefix="homeButton" href="/home"> Back to Home</Button>
                 </div>
                 :
                 <div className="row">

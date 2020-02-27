@@ -6,6 +6,7 @@ import Morty from './morty.png';
 import Rick from './rick.png';
 import Summer from './summer.png';
 import Beth from './beth.png';
+import Sound from 'react-sound';
 
 
 var imagesPoints= [Jerry, Morty, Summer, Rick, Beth];
@@ -137,12 +138,17 @@ class Game2 extends Component {
             <h1>Finish Game </h1>
             <h1>Points: {this.state.points} </h1>
             <h1>Name: {this.state.username} </h1>
+            <button href="/home">Back to Home</button>
 
           </div>
           :
           <div className="container">
             <div>
-              <audio ref="audio_tag" src="./show-me-what-you-got.mp3" autoPlay />
+              <Sound
+              url="./show-me-what-you-got.mp3"
+              playStatus={Sound.status.PLAYING}
+              playFromPosition={300 /* in milliseconds */}
+              />
             </div>
             <h2> Characters attempts : {this.state.attemptsCounter}</h2>
             {this.state.randomName === 1

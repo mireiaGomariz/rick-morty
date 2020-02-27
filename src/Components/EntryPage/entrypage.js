@@ -2,7 +2,9 @@
 import React , { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 import './entrypage.css';
+import Sound from 'react-sound';
 import { Redirect } from 'react-router';
+import sound1 from './show-me-what-you-got.mp3'
 
 
 class EntryPage extends Component {
@@ -15,7 +17,12 @@ class EntryPage extends Component {
 
       <div className="gif">
       <div>
-        <audio ref="audio_tag" src="./rick-and-morty-theme-song-hd.mp3" autoPlay />
+        <Sound
+        url="/rick-and-morty-theme-song-hd.mp3"
+        playStatus={Sound.status.PLAYING}
+        playFromPosition={500 /* in milliseconds */}
+        autoLoad
+        />
       </div>
         <div className="container">
           <div className="row justify-content-end ml-3">{this.props.username}</div>
