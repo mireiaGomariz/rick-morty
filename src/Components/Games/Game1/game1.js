@@ -137,8 +137,8 @@ class Game1 extends Component {
                 :
                 <div className="">
                   <div className="">
-                    <h3 className="titel-name-1">{this.state.currentIndex + 1}</h3>
-                    <h1 className="titel-name-1">{character.name}</h1>
+                    <h3 className="titelName1">{this.state.currentIndex + 1}</h3>
+                    <h1 className="titelName1">{character.name}</h1>
                     <img src={character.image} alt={character.name} />
                     {this.state.buttonClicked
                       ?
@@ -169,7 +169,7 @@ class Game1 extends Component {
                         </div>
                       </div>
                   }
-                  <h1 id={["validation"+character.id]}>Hola</h1>
+                  <h1 id={["validation"+character.id]}></h1>
                   <h1 className="pointText1" >Points: {this.state.points} / {this.props.characters.length}</h1>
                 </div>
               </div>
