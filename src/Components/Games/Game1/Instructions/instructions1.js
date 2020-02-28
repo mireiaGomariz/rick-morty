@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 class Instructions1 extends Component {
   constructor(props) {
     super(props)
-    console.log(props)
+
     this.state = {
       intervalId: ''
     }
@@ -22,6 +22,7 @@ class Instructions1 extends Component {
     }, 3000);
   }
   render() {
+    console.log(this.props)
     return (
       <div className="instructions" id="instructions1">
         <div id="instructions2">
