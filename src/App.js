@@ -84,7 +84,7 @@ class App extends Component {
                 />
                 <Route
                   path="/instructions1"
-                  render={(props) => <Instructions1 {...props} username={this.state.username}/>}
+                  render={(props) => <Instructions1 {...props} username={this.username}/>}
                 />
                 <Route
                   path="/instructions2"
@@ -92,7 +92,7 @@ class App extends Component {
                 />
                 <Route
                   path='/game2'
-                  render={(props) => <Game2 {...props} characters={this.state.characters} username={this.state.username} />}
+                  render={(props) => <Game2 {...props} characters={this.state.characters} username={this.username} />}
                 />
                 <Route exact path="/" render={() => (<Redirect to="/entry" />)} />
               </Switch>

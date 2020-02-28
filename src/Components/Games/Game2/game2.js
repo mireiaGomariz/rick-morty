@@ -9,8 +9,6 @@ import Beth from './beth.png';
 import Sound from 'react-sound';
 import sound2 from './rick-and-morty-theme-song-hd.mp3';
 
-
-
 var imagesPoints= [Jerry, Morty, Summer, Rick, Beth];
 
 
