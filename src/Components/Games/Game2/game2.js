@@ -6,6 +6,11 @@ import Morty from './morty.png';
 import Rick from './rick.png';
 import Summer from './summer.png';
 import Beth from './beth.png';
+import { Link } from 'react-router-dom';
+
+// import BgMusic from '@react-element/bg-music'
+// import sound2 from './show-me-what-you-got.mp3'
+
 
 
 
@@ -124,6 +129,14 @@ class Game2 extends Component {
     window.location.reload();
   }
 
+  // pauseAudio = () => {
+  //   const audioEl = this.sound2.current;
+  //   if (audioEl) {
+  //     audioEl.pause();
+  //     audioEl.paused || this.updateState({ play: false });
+  //   }
+  // }
+
   render() {
 
     return (
@@ -141,7 +154,7 @@ class Game2 extends Component {
             <h1>Finish Game </h1>
             <h1>Points: {this.state.points} </h1>
             </div>
-            <button href="/home">Back to Home</button>
+            <button href="/home"><Link to="/home">Back to Home</Link></button>
 
           </div>
           :

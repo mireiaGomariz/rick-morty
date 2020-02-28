@@ -27,7 +27,7 @@ class Instructions1 extends Component {
       <div className="instructions" id="instructions1">
         <div id="instructions2">
           <div className="imageInstru1" id="image">
-            <h1 className="hinst-1"> {`It's Alive? `}</h1>
+            <h1 className="hinst-1"> {`Is it Alive? `}</h1>
           </div>
           <div className="">
             <button className="buttonGame1" href="/game1">

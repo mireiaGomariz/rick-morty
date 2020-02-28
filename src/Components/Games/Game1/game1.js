@@ -5,6 +5,8 @@ import Rick from './rick.png';
 import Summer from './summer.png';
 import Beth from './beth.png';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
+
 
 import './game1.css'
 
@@ -133,7 +135,7 @@ class Game1 extends Component {
                   <button className="buttonTryAgainG1"   type="button"
                   onClick = {this.tryAgain}
                   >Try Again</button>
-                  <Button  bsPrefix="homeButton" href="/home"> Back to Home</Button>
+                  <button href="/home"><Link to="/home">Back to Home</Link></button>
                 </div>
                 :
                 <div className="">

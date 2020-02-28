@@ -1,13 +1,26 @@
 import React , { Component } from 'react';
 import './home.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+
+
+
+let audio = new Audio("https://freesound.org/data/previews/456/456032_1511977-lq.mp3")
+
+const start = () => {
+  audio.play()
+}
+
 
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = {username: this.props.location.state.username}
+    this.state = {username: this.props.location.username}
   }
+
+
+
   render() {
+    console.log(audio)
     return (
     <div className="home-menu">
       <div className="container">
@@ -19,7 +32,12 @@ class Home extends Component {
             <img className="grilla1" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
           </Link>
           <Link to="/instructions2">
-            <img className="grilla2" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
+            <img
+            onClick={start}
+            className="grilla2" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
+            <button
+            onClick={start}
+            >Test</button>
           </Link>
         </div>
       </div>
