@@ -5,6 +5,8 @@ import Morty from './morty.png';
 import Rick from './rick.png';
 import Summer from './summer.png';
 import Beth from './beth.png';
+import Button from 'react-bootstrap/Button';
+
 import './game1.css'
 
 var imagesPoints= [Jerry, Morty, Summer, Rick, Beth];
@@ -129,6 +131,7 @@ class Game1 extends Component {
                   <button className="buttonTryAgainG1"   type="button"
                   onClick = {this.tryAgain}
                   >Try Again</button>
+                  <Button  bsPrefix="homeButton" href="/home"> Back to Home</Button>
                 </div>
                 :
                 <div className="">
@@ -165,12 +168,12 @@ class Game1 extends Component {
                         </div>
                       </div>
                   }
-                  <h1 id={["validation"+character.id]} value=""></h1>
-                  <h1 className="pointText1"> Points: {this.state.points} / {this.props.characters.length}</h1>
+                  <h1 id={["validation"+character.id]}>Hola</h1>
+                  <h1 className="pointText1" >Points: {this.state.points} / {this.props.characters.length}</h1>
                 </div>
               </div>
               }
-              </div>
+          </div>
       </div>
     )
   }

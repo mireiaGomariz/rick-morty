@@ -1,6 +1,6 @@
 import React , { Component } from 'react';
-import Button from 'react-bootstrap/Button';
 import './home.css';
+import { Link } from 'react-router-dom'
 
 class Home extends Component {
   constructor(props) {
@@ -15,12 +15,12 @@ class Home extends Component {
             <h1 className="namewel">{this.state.username}</h1>
       </div>
         <div className="homeContainer">
-          <a href="/instructions1">
+          <Link to="/instructions1">
             <img className="grilla1" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
-          </a>
-          <a href="/instructions2">
-          <img className="grilla2" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
-          </a>
+          </Link>
+          <Link to="/instructions2">
+            <img className="grilla2" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
+          </Link>
         </div>
       </div>
     )

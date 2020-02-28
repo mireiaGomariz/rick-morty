@@ -26,13 +26,12 @@
     background-position:center;
 }
 
-.imageInstru2 {
 
-  animation: fadeout 2s;
+.instructions1 {
+  animation:  fadein 1s;
 }
-.imageInstru2 {
-  animation: fadein 2s;
-
+.instructions2 {
+  animation: fadein 1s;
 }
 
 @keyframes fadein {
@@ -40,16 +39,6 @@
     to   { opacity: 1; }
 }
 
-.image2 {
-  width: 100vw;
-  height: 100vh;
-  -webkit-backdrop-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-image: url('./fondo-run-dialogo2.png');
-  background-position:center;
-  background-repeat: no-repeat;
-}
 .buttonGame1 {
   position: relative;
   margin: 430px;
