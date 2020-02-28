@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 class Instructions1 extends Component {
   constructor(props) {
     super(props)
+    console.log(props)
     this.state = {
       intervalId: ''
     }
@@ -24,11 +25,15 @@ class Instructions1 extends Component {
     return (
       <div className="instructions" id="instructions1">
         <div id="instructions2">
-          <div className="image" id="image">
+          <div className="imageInstru1" id="image">
             <h1 className="hinst-1"> {`It's Alive? `}</h1>
           </div>
           <div className="">
-            <button className="buttonGame1" href="/game1"><Link to="/game1">Start</Link></button>
+            <button className="buttonGame1" href="/game1">
+            <Link to="/game1"
+              // username = {props.username}
+
+            >Start</Link></button>
           </div>
         </div>
       </div>

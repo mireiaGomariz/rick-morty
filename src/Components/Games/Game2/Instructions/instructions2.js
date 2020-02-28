@@ -15,7 +15,10 @@ class Instructions2 extends Component {
       <div>
         <div className="fondo-instr-diseño">
           <h1 className="hello-g2"> Get Schwifty </h1>
-          <button className="buttonGame2" href="/game2"><Link to="/game2">Start</Link></button>
+          <button className="buttonGame2" href="/game2">
+          <Link to="/game2"
+            username = {this.props.username}
+          >Start</Link></button>
         </div>
       </div>
     )

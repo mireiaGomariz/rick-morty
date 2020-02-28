@@ -8,6 +8,156 @@ import Game2 from './Components/Games/Game2/game2';
 import Instructions1 from './Components/Games/Game1/Instructions/instructions1';
 import Instructions2 from './Components/Games/Game2/Instructions/instructions2';
 
+const charactersObject = [
+  {
+  id:181,
+  name:"Jessica's Friend",
+  status:"Alive",
+  image:"https://rickandmortyapi.com/api/character/avatar/181.jpeg",
+  url:"https://rickandmortyapi.com/api/character/181",
+  },
+
+  {
+  id:182,
+  name:"Jim",
+  status:"Alive",
+  image:"https://rickandmortyapi.com/api/character/avatar/182.jpeg",
+  url:"https://rickandmortyapi.com/api/character/182",
+  },
+
+  {
+  id:183,
+  name:"Johnny Depp",
+  status:"Alive",
+  image:"https://rickandmortyapi.com/api/character/avatar/183.jpeg",
+  url:"https://rickandmortyapi.com/api/character/183",
+  },
+
+  {
+  id:184,
+  name:"Jon",
+  status:"Alive",
+  image:"https://rickandmortyapi.com/api/character/avatar/184.jpeg",
+  url:"https://rickandmortyapi.com/api/character/184",
+},
+
+  {
+  id:185,
+  name:"Joseph Eli Lipkip",
+  status:"Alive",
+  image:"https://rickandmortyapi.com/api/character/avatar/185.jpeg",
+  url:"https://rickandmortyapi.com/api/character/185",
+},
+
+  {
+  id:186,
+  name:"Joyce Smith",
+  status:"Alive",
+  image:"https://rickandmortyapi.com/api/character/avatar/186.jpeg",
+  url:"https://rickandmortyapi.com/api/character/186",
+},
+  {
+  id:187,
+  name:"Juggling Rick",
+  status:"unknown",
+  image:"https://rickandmortyapi.com/api/character/avatar/187.jpeg",
+  url: "https://rickandmortyapi.com/api/character/187"
+},
+  {
+  id:188,
+  name:"Karen Entity",
+  status:"Alive",
+  image:"https://rickandmortyapi.com/api/character/avatar/188.jpeg",
+  url:"https://rickandmortyapi.com/api/character/188",
+  },
+  {
+  id:189,
+  name:"Katarina",
+  status:"Dead",
+  image:"https://rickandmortyapi.com/api/character/avatar/189.jpeg",
+  url:"https://rickandmortyapi.com/api/character/189"
+},
+  {
+  id:190,
+  name:"Keara",
+  status:"Alive",
+  image:"https://rickandmortyapi.com/api/character/avatar/190.jpeg",
+  url:"https://rickandmortyapi.com/api/character/190",
+  },
+  {
+  id:191,
+  name:"Kevin",
+  status:"Dead",
+  image:"https://rickandmortyapi.com/api/character/avatar/191.jpeg",
+  url:"https://rickandmortyapi.com/api/character/191",
+  },
+  {
+  id:192,
+  name:"King Flippy Nips",
+  status:"Alive",
+  image:"https://rickandmortyapi.com/api/character/avatar/192.jpeg",
+  url:"https://rickandmortyapi.com/api/character/192",
+  },
+  {
+  id:193,
+  name:"King Jellybean",
+  status:"Dead",
+  image:"https://rickandmortyapi.com/api/character/avatar/193.jpeg",
+  url:"https://rickandmortyapi.com/api/character/193",
+  },
+  {
+  id:194,
+  name:"Kozbian",
+  status:"Alive",
+  image:"https://rickandmortyapi.com/api/character/avatar/194.jpeg",
+  url:"https://rickandmortyapi.com/api/character/194",
+  },
+  {
+  id:195,
+  name:"Kristen Stewart",
+  status:"Alive",
+  image:"https://rickandmortyapi.com/api/character/avatar/195.jpeg",
+  url:"https://rickandmortyapi.com/api/character/195",
+  },
+  {
+  id:196,
+  name:"Krombopulos Michael",
+  status:"Dead",
+  species:"Alien",
+  image:"https://rickandmortyapi.com/api/character/avatar/196.jpeg",
+  url:"https://rickandmortyapi.com/api/character/196"
+  },
+  {
+  id:197,
+  name:"Kyle",
+  status:"Dead",
+  image:"https://rickandmortyapi.com/api/character/avatar/197.jpeg",
+  url:"https://rickandmortyapi.com/api/character/197",
+  },
+  {
+  id:198,
+  name:"Lady Katana",
+  status:"Dead",
+  image:"https://rickandmortyapi.com/api/character/avatar/198.jpeg",
+  url:"https://rickandmortyapi.com/api/character/198",
+  },
+  {
+  id:199,
+  name:"Larva Alien",
+  status:"Alive",
+  image:"https://rickandmortyapi.com/api/character/avatar/199.jpeg",
+  url:"https://rickandmortyapi.com/api/character/199",
+  },
+  {
+  id:200,
+  name:"Lawyer Morty",
+  status:"unknown",
+  image:"https://rickandmortyapi.com/api/character/avatar/200.jpeg",
+  url:"https://rickandmortyapi.com/api/character/200"
+  }
+]
+
+
 const username = "";
 class App extends Component {
   state = {
@@ -49,6 +199,7 @@ class App extends Component {
 
   handleChange = (event) => {
    this.username = event.target.value;
+   localStorage.setItem(username, {username})
  }
 
  handleSubmit = (event) => {
@@ -58,6 +209,7 @@ class App extends Component {
 
  checkUserReady = () => {
    this.setState({userNameReady: true})
+
   }
 
   render() {

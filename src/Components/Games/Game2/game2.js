@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 import './game2.css'
-import Jerry from './jerry.png';
+import Jerry from './jerry1.png';
 import Morty from './morty.png';
 import Rick from './rick.png';
 import Summer from './summer.png';
 import Beth from './beth.png';
-import Sound from 'react-sound';
+
 
 
 
@@ -63,6 +63,7 @@ class Game2 extends Component {
 
   constructor(props) {
     super(props)
+    console.log(props)
     this.state = {
       characterOne : [],
       characterTwo : [],
@@ -75,7 +76,7 @@ class Game2 extends Component {
       answer:"",
       attemptsCounter: 10,
       play: false,
-      username: this.props.location.username
+
     };
 
   }
@@ -129,7 +130,7 @@ class Game2 extends Component {
 
       <div className="game2Content">
         {this.state.attemptsCounter === 0
-          ?    
+          ?
           <div>
             {getFinalResultOfCharacter(this.state.points)}
             <Button className="buttonTryAgainG2"
@@ -146,11 +147,7 @@ class Game2 extends Component {
           :
           <div className="game2Content">
             <div>
-              <Sound
-              url="./rick-and-morty-theme-song-hd"
-              playStatus={Sound.status.PLAYING}
-              autoLoad
-              />
+
             </div>
             <h2 className="caractersText"> Characters attempts : {this.state.attemptsCounter}</h2>
             {this.state.randomName === 1

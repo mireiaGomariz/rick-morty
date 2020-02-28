@@ -6,7 +6,9 @@ import Sound from 'react-sound';
 import { Redirect } from 'react-router';
 import sound1 from './show-me-what-you-got.mp3'
 
+
 class EntryPage extends Component {
+
 
   render() {
     if (this.props.userNameReady) {
@@ -34,7 +36,7 @@ class EntryPage extends Component {
                     type= "text"
                     />
                      <div>
-                      <Button onClick={this.props.checkUserReady} bsPrefix="entryButton"> Click  me </Button>
+                      <Button type="submit" onClick={this.props.checkUserReady} bsPrefix="entryButton"> Click  me </Button>
                      </div>
                 </form>
 

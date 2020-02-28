@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Jerry from './jerry1.png';
-/* import Jerry from './jerry2.png'; */
 import Morty from './morty.png';
 import Rick from './rick.png';
 import Summer from './summer.png';
@@ -51,7 +50,7 @@ function getFinalResultOfCharacter(points){
                 <img className="fotoSummer" src={imagesPoints[2]} alt="Summer"/>
                 <h3>"All I have are pictures are of me and my friends from school. What? What teenage girl has pictures of her family? It's not like we're Mormon or dying"</h3>
               </div>
-          </div>  
+          </div>
         )
       }else if (points > 18) {
         return (
@@ -70,13 +69,15 @@ function getFinalResultOfCharacter(points){
 class Game1 extends Component {
   constructor(props) {
     super(props)
+    console.log(props)
     this.state = {
       character: this.props.characters[0],
-      currentIndex: 0,    
+      currentIndex: 0,
       points: 0,
       buttonClicked: false,
       answer: "",
       isFinish: false,
+
     }
   }
 
@@ -121,9 +122,9 @@ class Game1 extends Component {
     let {character} = this.state
     return (
       <div className= "fondo-game1-1">
-              <div> 
+              <div>
               {this.state.isFinish
-                ?  
+                ?
                 <div>
                 {getFinalResultOfCharacter(this.state.points)}
 

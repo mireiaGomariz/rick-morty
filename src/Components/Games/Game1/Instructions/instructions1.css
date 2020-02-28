@@ -2,7 +2,7 @@
   background: #112 url('./fondo-run-.png')  no-repeat center center fixed;
   background-size:cover;
   margin:0
-} 
+}
 .imageInstru2 {
   background: #112 url('./fondo-run-dialogo.png')  no-repeat center center fixed;
   background-size:cover;
@@ -57,7 +57,7 @@
   overflow: hidden;
   transition: 0.2s;
 }
-.buttonGame1:hover 
+.buttonGame1:hover
 {
   text-transform: uppercase;
   padding: 10px 30px;
