@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 import './game2.css'
-import Jerry from './jerry.png';
+import Jerry from './jerry1.png';
 import Morty from './morty.png';
 import Rick from './rick.png';
 import Summer from './summer.png';

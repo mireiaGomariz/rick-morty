@@ -16,3 +16,7 @@ code {
   font-family: 'Get Schwifty';
   src: local('Get Schwifty'), url(./fonts/get_schwifty__a_rick_and_morty_font_by_jonizaak-dajw4u8.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Calligraphr';
+  src: local('Calligraphr'), url(./fonts/Calligraphr-Regular.ttf) format('truetype');
+}
