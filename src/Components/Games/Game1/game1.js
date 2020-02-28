@@ -116,7 +116,7 @@ class Game1 extends Component {
     return (
       <div className= "fondo-game1-1">
               <div>
-              {!this.state.isFinish
+              {this.state.isFinish
                 ?
                 <div>
                 {getFinalResultOfCharacter(this.state.points)}
@@ -163,12 +163,12 @@ class Game1 extends Component {
                         </div>
                       </div>
                   }
-                  <h1 id={["validation"+character.id]} value=""></h1>
+                  <h1 id={["validation"+character.id]}>Hola</h1>
                   <h1 className="point-text1" >Points: {this.state.points} / {this.props.characters.length}</h1>
                 </div>
               </div>
               }
-              </div>
+          </div>
       </div>
     )
   }

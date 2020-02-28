@@ -21,13 +21,13 @@ class App extends Component {
   componentDidMount() {
     fetch(`https://rickandmortyapi.com/api/character/?page=${this.state.pageIndex}`)
       .then(res => {
-        if(!res.ok) {
-          throw new Error(
-            `There was here was a problem with your request. Error code: ${
-              res.status
-            }, ${res.statusText}`
-          );
-        }
+        // if(!res.ok) {
+        //   throw new Error(
+        //     `There was here was a problem with your request. Error code: ${
+        //       res.status
+        //     }, ${res.statusText}`
+        //   );
+        // }
         return res.json();
 
       })
@@ -38,12 +38,12 @@ class App extends Component {
             characters: json.results
           })
       })
-      .catch(error => {
-        let errorString = `Your fetch request didn't work, it returned the following: ${error.toString()}`;
-        this.setState({
-          error: errorString
-        });
-      });
+      // .catch(error => {
+      //   let errorString = `Your fetch request didn't work, it returned the following: ${error.toString()}`;
+      //   this.setState({
+      //     error: errorString
+      //   });
+      // });
 
   }
 
@@ -72,7 +72,6 @@ class App extends Component {
         ) : (
           <div>
           <div className="App">
-
               <Switch>
                 <Route path="/entry"
                   render={(props) => <EntryPage {...props} handleSubmit={this.handleSubmit} userNameReady={this.state.userNameReady}
@@ -88,7 +87,7 @@ class App extends Component {
                 />
                 <Route
                   path="/instructions2"
-                  render={(props) => <Instructions2 {...props} username={this.state.username} test={'test'}/>}
+                  render={(props) => <Instructions2 {...props} username={this.username} test={'test'}/>}
                 />
                 <Route
                   path='/game2'

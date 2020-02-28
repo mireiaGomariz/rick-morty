@@ -7,7 +7,8 @@ import Rick from './rick.png';
 import Summer from './summer.png';
 import Beth from './beth.png';
 import Sound from 'react-sound';
-import sound2 from './rick-and-morty-theme-song-hd.mp3';
+
+
 
 var imagesPoints= [Jerry, Morty, Summer, Rick, Beth];
 
@@ -146,7 +147,6 @@ class Game2 extends Component {
               <Sound
               url="./rick-and-morty-theme-song-hd"
               playStatus={Sound.status.PLAYING}
-              playFromPosition={300 /* in milliseconds */}
               autoLoad
               />
             </div>
@@ -176,8 +176,6 @@ class Game2 extends Component {
         }
       </div>
     )
-
-
   }
 }
 
