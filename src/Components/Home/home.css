@@ -1,5 +1,4 @@
 .home-menu {
-    width: ;
     height:100vh ;
     -webkit-backdrop-size: cover;
     -moz-background-size: cover;
@@ -12,23 +11,21 @@
   font-family: Get Schwifty;
     font-size: 100px;
              -webkit-text-fill-color:rgb(53, 215, 255);
-             -webkit-text-stroke:4px;
-             -webkit-text-stroke-color: hsl(0, 0%, 2%);
+             -webkit-text-stroke:2px;
+             -webkit-text-stroke-color: hsl(113, 97%, 58%);
 }
 .namewel {
   text-align: center;
   font-family: Get Schwifty;
   font-size: 70px;
-           -webkit-text-fill-color: hsl(113, 97%, 58%);
+           -webkit-text-fill-color: #f80eaa;
            -webkit-text-stroke:2px;
            -webkit-text-stroke-color: hsl(0, 0%, 2%);
 }
 
 .homeContainer {
-
   height: 100vh;
   width: 95%;
-  position:;
   z-index: 1;
   right: 0;
   font-family: Get Schwifty;
@@ -37,12 +34,13 @@
 .grilla1 {
   width: 400px;
   height: 400px;
-  
+  display: flex;
 }
 
 .grilla2 {
   width: 400px;
   height: 400px;
   margin-left: 450px;
+  display: flex;
 }
 

@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/Button';
 import './entrypage.css';
 import { Redirect } from 'react-router';
 
-
 class EntryPage extends Component {
 
   render() {
@@ -15,19 +14,22 @@ class EntryPage extends Component {
 
       <div className="gif">
       <div>
-        <audio ref="audio_tag" src="./rick-and-morty-theme-song-hd.mp3" autoPlay />
+         <audio ref="audio_tag" preload="auto" src="./rick-and-morty-theme-song-hd.mp3" autoPlay />
       </div>
-        <div className="container">
-          <div className="row justify-content-end ml-3">{this.props.username}</div>
-          <div className="row d-flex justify-content-center cardEntry">
-                <h3>Enter your Name: </h3>
-                <form>
+        <div className="containerEntryPage">
+          <div className="">{this.props.username}</div>
+          <div>
+              <h3 className="titleEntry">Enter your Name: </h3>
+                <form >
                   <input
                     value={this.props.usernameList} onChange={this.props.handleChange}
+                    className="entryName"
                     id= "username"
                     type= "text"
-                  />
-                  <Button onClick={this.props.checkUserReady} bsPrefix="entryButton"> Clickme </Button>
+                    />
+                     <div>
+                      <Button onClick={this.props.checkUserReady} bsPrefix="entryButton"> Click  me </Button>
+                     </div>
                 </form>
 
           </div>

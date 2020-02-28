@@ -21,8 +21,6 @@ class Home extends Component {
           <a href="/instructions2">
           <img className="grilla2" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
           </a>
-              <Button  bsPrefix="game1" href="/instructions1"> Game 1</Button>
-              <Button  bsPrefix="game2" href="/instructions2"> Game 2</Button>
         </div>
       </div>
     )

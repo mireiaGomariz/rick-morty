@@ -75,34 +75,34 @@ class Game2 extends Component {
         {this.state.attemptsCounter === 0
           ?
           <div>
-
-            <Button
+            <button className="buttonTryAgainG2"
             type="button"
             onClick = {this.tryAgain}>
-            Try Again</Button>
-            <h1>Finish Game </h1>
-            <h1>Points: {this.state.points} </h1>
-            <h1>Name: {this.state.username} </h1>
-
+            Try Again</button>
+            <div className="textFinish">
+                <h1>Finish Game </h1>
+                <h1>Points: {this.state.points} </h1>
+                <h1>Name: {this.state.username} </h1>
+            </div>
           </div>
           :
-          <div className="container">
+          <div className="game2Content">
             <div>
               <audio ref="audio_tag" src="./show-me-what-you-got.mp3" autoPlay />
             </div>
-            <h2> Characters attempts : {this.state.attemptsCounter}</h2>
+            <h2 className="caractersText"> Characters attempts : {this.state.attemptsCounter}</h2>
             {this.state.randomName === 1
             ?
-            <h1 id="select-character"  className="mt-5">{this.state.characterOne.name}</h1>
+            <h1 id="select-character" className="caractersText22">{this.state.characterOne.name}</h1>
             :
-            <h1 id="select-character" className="mt-5">{this.state.characterTwo.name}</h1>
+            <h1 id="select-character" className="caractersText22">{this.state.characterTwo.name}</h1>
             }
             <div className="row mt-3 justify-content-around">
-              <div className="col-md-6 mt-4">
+              <div className="">
                 <img src={this.state.characterOne.image} alt={this.state.characterOne.name} onClick = { this.checkIfCorrect}/>
 
               </div>
-              <div className="col-md-6 mt-4">
+              <div className="">
                 <img src={this.state.characterTwo.image} alt={this.state.characterTwo.name} onClick = { this.checkIfCorrect} />
 
               </div>

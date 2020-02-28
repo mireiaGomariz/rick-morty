@@ -1,5 +1,5 @@
 .hello-g2 {
-    font-family: Get Schwifty;
+    font-family: Calligraphr;
     font-size: 100px;
              -webkit-text-fill-color:rgb(37, 253, 17);
              -webkit-text-stroke:3px;
@@ -16,3 +16,29 @@
     background-image: url('diseño_fondo.png');
     background-repeat: no-repeat;
 }
+.buttonGame2 {
+    position: relative;
+    margin: 430px;
+    margin-left: 1px;
+    border: none;
+    border-radius: 10px;
+    background-position: center;
+    display: inline-block;
+    padding: 5px 20px;
+    color: #0f0727;
+    background-color: #f80eaa;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 15px;
+    overflow: hidden;
+    transition: 0.2s;
+  }
+  .buttonGame2:hover 
+  {
+    text-transform: uppercase;
+    padding: 10px 30px;
+    color: #f80eaa;
+    background: #9acd32;
+    box-shadow: 0 0 10px #9acd32, 0 0 40px #f80eaa, 0 0 80px#9acd32;
+  }

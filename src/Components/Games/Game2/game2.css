@@ -8,16 +8,60 @@
     background-image: url("./cabezota-one.jpg");
 }
 
-.titel-name-2 {
-    -webkit-text-fill-color: hsl(320, 91%, 55%);
-           -webkit-text-stroke:1px;
-           -webkit-text-stroke-color: hsl(115, 98%, 49%);
+.caractersText {
+    font-family: Calligraphr;
+    -webkit-text-fill-color: hsl(113, 95%, 46%);
+    -webkit-text-stroke:2px;
+    -webkit-text-stroke-color: hsl(64, 100%, 55%);
+}
+.caractersText22 {
+    font-size: 70px;
+    font-family: Calligraphr;
+    -webkit-text-fill-color: hsl(0, 94%, 49%);
+    -webkit-text-stroke:1px;
+    -webkit-text-stroke-color: hsl(0, 94%, 49%);
 }
 
 .point-text2{
     font-family: Get Schwifty;
-    font-size: 70px;
-           -webkit-text-fill-color: hsl(66, 96%, 53%);
+    font-size: 55px;
+    -webkit-text-fill-color: hsl(113, 95%, 46%);
+    -webkit-text-stroke:2px;
+    -webkit-text-stroke-color: hsl(64, 100%, 55%);
+}
+
+.buttonTryAgainG2{
+    margin: 10px;
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 10px 10px;
+    border-radius: 50px;
+    background-color: #f80eaa;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 15px;
+    overflow: hidden;
+    transition: 0.2s;
+    font-family: Calligraphr;
+           -webkit-text-fill-color: hsl(315, 22%, 96%);
            -webkit-text-stroke:1px;
-           -webkit-text-stroke-color:hsl(182, 94%, 56%);
+           -webkit-text-stroke-color: hsl(192, 96%, 51%);
+  }
+  .buttonTryAgainG2:hover 
+  {
+    text-transform: uppercase;
+    padding: 8px 8px;
+    color: #f80eaa;
+    background: #9acd32;
+    box-shadow: 0 0 10px #9acd32, 0 0 40px #ffff00, 0 0 80px#9acd32; 
+  }
+.textFinish{
+    font-family: Calligraphr;
+    font-size: 100px;
+    background-position: center;
+            -webkit-text-fill-color: hsl(113, 95%, 46%);
+            -webkit-text-stroke:2px;
+            -webkit-text-stroke-color: hsl(64, 100%, 55%);
+           
 }

@@ -28,30 +28,28 @@ class Instructions1 extends Component {
 
   render() {
     return (
-      <div>
-      {this.state.showFirst
-        ?
-        <div className="instructions1" id="instructions1">
-          <div className="image" id="image">
-                <h1 className="hinst-1"> {`It's Alive? `}</h1>
-          </div>
-          <div className="">
-            <button href="/game1"><Link to="/game1">Game 1</Link></button>
-          </div>
-        </div>
-        :
-        <div className="instructions2" id="instructions2">
-          <div className="image2" id="image">
-                <h1 className="hinst-1"> {`It's Alive? `}</h1>
-          </div>
-          <div className="">
-            <button href="/game1"><Link to="/game1">Game 1</Link></button>
-          </div>
-        </div>
-
-      }
+      <div className="imageInstru1">
+          {this.state.showFirst
+            ?
+            <div className="imageInstru1" id="imageInstru1">
+                <div className="imageInstru1" id="image">
+                      <h1 className="hinst-1"> {`It's Alive? `}</h1>
+                      <div>
+                      <button className="buttonGame1" href="/game1"><Link to="/game1">Start</Link></button>
+                      </div>
+              </div>
+            </div>
+            :
+            <div className="imageInstru2" id="imageInstru2">
+                <div className="image2" id="image">
+                      <h1 className="hinst-1"> {`It's Alive? `}</h1>
+                      <div >
+                      <button className="buttonGame1" href="/game1"><Link to="/game1">Start</Link></button>
+                      </div>
+              </div>   
+            </div>
+           }
       </div>
-
     )
   }
 }
