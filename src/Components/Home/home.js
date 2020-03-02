@@ -27,20 +27,18 @@ class Home extends Component {
             <h1 className="namewel">{this.state.username}</h1>
       </div>
         <div className="homeContainer">
-          <Link to="/instructions1">
-            <img className="grilla1" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
+            <Link to="/instructions1">
+              <img className="grilla1" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
+              <p className="textGame1">Game 1</p>
+            </Link>
 
-          </Link>
-          <p className="textGame1">Game 1</p>
+            <Link to="/instructions2">
+              <img
+              onClick={start}
+              className="grilla2" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
+              <p className="textGame2">Game 2</p>
+            </Link>
 
-          <Link to="/instructions2">
-            <img
-            onClick={start}
-            className="grilla2" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
-
-
-          </Link>
-          <p className="textGame2">Game 2</p>
         </div>
       </div>
     )

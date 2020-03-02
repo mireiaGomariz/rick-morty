@@ -22,17 +22,21 @@ class Instructions1 extends Component {
   }
   render() {
     return (
-      <div className="instructions" id="instructions1">
-        <div id="instructions2">
-          <div className="imageInstru2" id="image">
-            <h1 className="hinst-1"> {`Is it Alive? `}</h1>
+      <div className="imageInstru1" id="image">
+          <div className="instructions" id="instructions1">
+            <div id="instructions2">
+              <div>
+                <h1 className="hinst-1"> {`Is it Alive? `}</h1>
+              </div>
+              <div className="thisDiv">
+                <button className="buttonGame1" href="/game1">
+                <Link to="/game1"
+                  // username = {props.username}
+
+                >Start</Link></button>
+              </div>
+            </div>
           </div>
-          <div className="">
-            <button className="buttonGame1" href="/game1">
-            <Link to="/game1"
-            >Start</Link></button>
-          </div>
-        </div>
       </div>
     )
   }
