@@ -4,18 +4,15 @@
              -webkit-text-fill-color:rgb(37, 253, 17);
              -webkit-text-stroke:3px;
              -webkit-text-stroke-color:black;
-
 }
 .imageInstru2 {
-
     width: 100vw;
     height: 100vh;
-    -webkit-backdrop-size: cover;
-    -moz-background-size: cover;
     background-size: cover;
-    background-image: url('./diseño_fondo.png');
-    background-position:center;
+    background-image: url('./diseño_fondo.png') no-repeat center center fixed;
 }
+
+
 .buttonGame2 {
     position: relative;
     margin: 430px;
@@ -41,4 +38,8 @@
     color: #f80eaa;
     background: #9acd32;
     box-shadow: 0 0 10px #9acd32, 0 0 40px #f80eaa, 0 0 80px#9acd32;
+  }
+
+  .noScroll {
+    height: 1px;
   }

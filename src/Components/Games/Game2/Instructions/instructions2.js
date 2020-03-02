@@ -9,7 +9,6 @@ import image4 from './diseño_fonfo_dialogo_2.png';
 class Instructions2 extends Component {
   constructor(props) {
     super(props)
-
   }
 
   componentDidMount() {
@@ -26,17 +25,12 @@ class Instructions2 extends Component {
   render() {
     return (
 
-
       <div className="instructions" id="instructions1">
         <div id="instructions2">
           <div className="imageInstru2" id="image">
             <h1 className="hinst-1"> Get Schwifty </h1>
-          </div>
-          <div className="">
             <button className="buttonGame1" href="/game2">
             <Link to="/game2"
-              // username = {props.username}
-
             >Start</Link></button>
           </div>
         </div>
