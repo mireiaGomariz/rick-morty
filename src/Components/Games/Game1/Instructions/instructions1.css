@@ -21,7 +21,7 @@
     width: 100vw;
     height: 100vh;
     background-size: cover;
-    background-image: url('./fondo-run-.png') no-repeat center center fixed;
+    background-image: url('./fondo-run-.png');
 }
 
 
