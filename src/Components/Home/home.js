@@ -28,7 +28,9 @@ class Home extends Component {
       </div>
         <div className="homeContainer">
             <Link to="/instructions1" style={{ textDecoration: 'none'}}>
-              <img className="grilla1" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
+              <img className="grilla1"
+                onClick={start}
+               src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
               <p className="textGame1">Game I</p>
             </Link>
 

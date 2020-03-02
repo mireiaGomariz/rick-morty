@@ -240,11 +240,12 @@ class App extends Component {
                 />
                 <Route
                   path="/instructions1"
-                  render={(props) => <Instructions1 {...props} username={this.username}/>}
+                  render={(props) => <Instructions1 {...props} username={this.username} characters={this.state.characters}/>}
                 />
                 <Route
                   path="/instructions2"
-                  render={(props) => <Instructions2 {...props} username={this.username} test={'test'}/>}
+                  render={(props) => <Instructions2 {...props} username={this.username}
+                  characters={this.state.characters} test={'test'}/>}
                 />
                 <Route
                   path='/game2'

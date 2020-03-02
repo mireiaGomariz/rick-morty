@@ -4,8 +4,8 @@ import Morty from './morty.png';
 import Rick from './rick.png';
 import Summer from './summer.png';
 import Beth from './beth.png';
-import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+
 
 
 import './game1.css'
@@ -122,7 +122,7 @@ class Game1 extends Component {
     return (
       <div className= "fondo-game1-1">
               <div>
-              {!this.state.isFinish
+              {this.state.isFinish
                 ?
                 <div>
                 <h3 className="usernameText"> {this.props.username}</h3>
@@ -138,7 +138,7 @@ class Game1 extends Component {
                 :
                 <div className="">
                   <div className="">
-                    <h3 className="titelName1">{this.state.currentIndex + 1}</h3>
+                    <h3 className="titelName1"> Character number:  {this.state.currentIndex + 1}</h3>
                     <h1 className="titelName1">{character.name}</h1>
                     <img src={character.image} alt={character.name} />
                     {this.state.buttonClicked
@@ -151,8 +151,8 @@ class Game1 extends Component {
                         NEXT</button>
                       </div>
                       :
-                      <div id={["buttons"+character.id]} className="row">
-                        <div className=" butStyle1">
+                      <div id={["buttons"+character.id]}>
+                        <div className="butStyle1">
                           <div className="bottoN3">
                             <button className="bottonN123"
                             type="button"

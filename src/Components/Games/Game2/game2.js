@@ -68,7 +68,7 @@ class Game2 extends Component {
 
   constructor(props) {
     super(props)
-    console.log(props)
+
     this.state = {
       characterOne : [],
       characterTwo : [],
@@ -171,10 +171,10 @@ class Game2 extends Component {
             }
             <div className="row mt-3 justify-content-around">
               <div className="">
-                <img src={this.state.characterOne.image} alt={this.state.characterOne.name} onClick = { this.checkIfCorrect}/>
+                <img className="imagesGame2"src={this.state.characterOne.image} alt={this.state.characterOne.name} onClick = { this.checkIfCorrect}/>
 
               </div>
-              <div className="">
+              <div className="imagesGame2">
                 <img src={this.state.characterTwo.image} alt={this.state.characterTwo.name} onClick = { this.checkIfCorrect} />
 
               </div>

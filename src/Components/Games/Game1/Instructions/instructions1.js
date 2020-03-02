@@ -7,16 +7,19 @@ class Instructions1 extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      intervalId: ''
+      intervalId: '',
+      showButton: false,
     }
   }
   componentDidMount() {
+    let self = this
     setTimeout(function () {
       document.getElementById('image').style.backgroundImage = 'url(' + image1 + ')'
       document.getElementById('instructions1').className = 'instructions1'
       setTimeout(function () {
         document.getElementById('image').style.backgroundImage = 'url(' + image2 + ')'
         document.getElementById('instructions2').className = 'instructions2'
+        self.setState({ showButton: true})
       }, 6000);
     }, 2000);
   }
@@ -30,10 +33,12 @@ class Instructions1 extends Component {
             <h1 className="hinst-1"> Get Schwifty</h1>
           </div>
           <div className="thisDiv">
+          {this.state.showButton &&
             <button className="buttonGame1" href="/game1">
             <Link to="/game1"
             style={{ textDecoration: 'none', color: 'black'}}
             >Start</Link></button>
+          }
           </div>
           </div>
         </div>
