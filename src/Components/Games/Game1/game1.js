@@ -132,7 +132,7 @@ class Game1 extends Component {
                   <button className="buttonTryAgainG1"   type="button"
                   onClick = {this.tryAgain}
                   >Try Again</button>
-                  <button className="buttonTryAgainG1" href="/home"><Link to="/home">Back to Home</Link></button>
+                  <button className="buttonTryAgainG1" href="/home"><Link to="/home" style={{ textDecoration: 'none', color: 'black' }}>Back to Home</Link></button>
                 </div>
                 :
                 <div className="">

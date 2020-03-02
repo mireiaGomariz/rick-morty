@@ -20,3 +20,8 @@ code {
   font-family: 'Calligraphr';
   src: local('Calligraphr'), url(./fonts/Calligraphr-Regular.ttf) format('truetype');
 }
+
+button {
+  font-family: Calligraphr;
+
+}

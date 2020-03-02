@@ -41,6 +41,7 @@
 }
 
 .bottonN123 {
+    font-family: Calligraphr;
     position: relative;
     margin: 10px;
     border: none;
@@ -55,13 +56,14 @@
     transition: 0.2s;
   }
 
-.bottonN123:hover 
+.bottonN123:hover
 {
+    font-family: Calligraphr;
     text-transform: uppercase;
     padding: 7px 7px;
     color: #ffff00;
     background: #9acd32;
-    box-shadow: 0 0 10px #9acd32, 0 0 40px #ffff00, 0 0 80px#9acd32; 
+    box-shadow: 0 0 10px #9acd32, 0 0 40px #ffff00, 0 0 80px#9acd32;
 }
 
 .fotoTodas12345 {
@@ -112,6 +114,7 @@
 }
 
 .buttonTryAgainG1 {
+    font-family: Calligraphr;
     margin: 10px;
     position: relative;
     display: inline-block;
@@ -129,9 +132,10 @@
 }
 
 .buttonTryAgainG1:hover {
+    font-family: Calligraphr;
     text-transform: uppercase;
     padding: 8px 8px;
     color: #ffff00;
     background: #9acd32;
-    box-shadow: 0 0 10px #9acd32, 0 0 40px #ffff00, 0 0 80px#9acd32; 
+    box-shadow: 0 0 10px #9acd32, 0 0 40px #ffff00, 0 0 80px#9acd32;
 }

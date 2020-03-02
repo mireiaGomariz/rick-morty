@@ -27,12 +27,12 @@ class Home extends Component {
             <h1 className="namewel">{this.state.username}</h1>
       </div>
         <div className="homeContainer">
-            <Link to="/instructions1">
+            <Link to="/instructions1" style={{ textDecoration: 'none'}}>
               <img className="grilla1" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
               <p className="textGame1">Game 1</p>
             </Link>
 
-            <Link to="/instructions2">
+            <Link to="/instructions2" style={{ textDecoration: 'none'}}>
               <img
               onClick={start}
               className="grilla2" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>

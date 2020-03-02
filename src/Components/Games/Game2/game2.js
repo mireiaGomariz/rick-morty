@@ -155,7 +155,7 @@ class Game2 extends Component {
             type="button"
             onClick = {this.tryAgain}>
             Try Again</Button>
-            <button href="/home" className="backHomeButton"><Link to="/home">Back to Home</Link></button>
+            <button href="/home" className="backHomeButton"><Link to="/home" style={{ textDecoration: 'none', color: 'black'  }}>Back to Home</Link></button>
 
           </div>
           :

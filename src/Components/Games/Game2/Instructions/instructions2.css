@@ -14,6 +14,7 @@
 
 
 .buttonGame2 {
+    font-family: Calligraphr;
     position: relative;
     margin: 430px;
     margin-left: 1px;
@@ -33,6 +34,7 @@
   }
   .buttonGame2:hover
   {
+    font-family: Calligraphr;
     text-transform: uppercase;
     padding: 10px 30px;
     color: #f80eaa;

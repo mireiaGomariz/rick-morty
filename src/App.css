@@ -40,3 +40,8 @@
     transform: rotate(360deg);
   }
 }
+
+button {
+  font-family: Calligraphr!important;
+
+}

@@ -38,6 +38,8 @@
 }
 
 .buttonGame1 {
+
+  font-family: Calligraphr;
   position: relative;
   margin: auto;
   border: none;
@@ -56,6 +58,8 @@
 }
 .buttonGame1:hover
 {
+
+  font-family: Calligraphr;
   text-transform: uppercase;
   padding: 10px 30px;
   color: #f80eaa;

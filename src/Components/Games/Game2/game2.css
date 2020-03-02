@@ -1,5 +1,5 @@
 .game2Content {
-    height: 100vh;
+    height: 111vh;
     background-position: center;
     -webkit-backdrop-size: cover;
     -moz-background-size: cover;
@@ -72,7 +72,7 @@
 
 .resultsImg {
   width: 20%;
-  height: 20%;
+  height: 10%;
 }
 
 .quoteCharacter {
@@ -112,6 +112,11 @@
     background: #9acd32;
     box-shadow: 0 0 10px #9acd32, 0 0 40px #ffff00, 0 0 80px#9acd32;
     font-family: Calligraphr;
+    text-decoration: none;
 
   }
+}
+
+.noUnderline {
+  text-decoration: none;
 }
