@@ -31,31 +31,30 @@
 }
 
 .buttonTryAgainG2{
-    margin: 10px;
-    position: relative;
-    border: none;
-    display: inline-block;
-    padding: 10px 10px;
-    border-radius: 50px;
-    background-color: #f80eaa;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 15px;
-    overflow: hidden;
-    transition: 0.2s;
-    font-family: Calligraphr;
-           -webkit-text-fill-color: hsl(315, 22%, 96%);
-           -webkit-text-stroke:1px;
-           -webkit-text-stroke-color: hsl(192, 96%, 51%);
-  }
-  .buttonTryAgainG2:hover 
-  {
-    text-transform: uppercase;
-    padding: 8px 8px;
-    color: #f80eaa;
-    background: #9acd32;
-    box-shadow: 0 0 10px #9acd32, 0 0 40px #ffff00, 0 0 80px#9acd32; 
-  }
+  font-family: Calligraphr;
+  position: relative;
+  margin: 10px;
+  border: none;
+  display: inline-block;
+  padding: 5px 5px;
+  border-radius: 50px;
+  background: #f80eaa;
+  background-position: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.buttonTryAgainG2:hover
+{
+  font-family: Calligraphr;
+  text-transform: uppercase;
+  padding: 7px 7px;
+  color: #ffff00;
+  background: ##f80eaa;
+  box-shadow: 0 0 10px #9acd32, 0 0 40px #ffff00, 0 0 80px#9acd32;
+}
 .textFinish{
     font-family: Calligraphr;
     font-size: 100px;
@@ -63,5 +62,56 @@
             -webkit-text-fill-color: hsl(113, 95%, 46%);
             -webkit-text-stroke:2px;
             -webkit-text-stroke-color: hsl(64, 100%, 55%);
-           
+
+}
+
+.finishResult {
+  font-family: Calligraphr;
+  font-size: 70px;
+}
+
+.resultsImg {
+  width: 20%;
+  height: 20%;
+}
+
+.quoteCharacter {
+  font-family: Calligraphr;
+  font-size: 40px;
+  color: white;
+
+}
+
+.resultCharacterTitle {
+  font-family: Calligraphr;
+  font-size: 70px;
+  -webkit-text-fill-color: hsl(113, 95%, 46%);
+  -webkit-text-stroke:2px;
+  -webkit-text-stroke-color: hsl(64, 100%, 55%);
+}
+
+.backHomeButton {
+  position: relative;
+  margin: 10px;
+  border: none;
+  display: inline-block;
+  padding: 5px 5px;
+  border-radius: 50px;
+  background-position: center;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.2s;
+  font-family: Calligraphr;
+  background: #9acd32;
+
+}
+
+.backHomeButton:hover {
+  {
+    padding: 7px 7px;
+    background: #9acd32;
+    box-shadow: 0 0 10px #9acd32, 0 0 40px #ffff00, 0 0 80px#9acd32;
+    font-family: Calligraphr;
+
+  }
 }

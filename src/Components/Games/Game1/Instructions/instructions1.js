@@ -30,8 +30,6 @@ class Instructions1 extends Component {
           <div className="">
             <button className="buttonGame1" href="/game1">
             <Link to="/game1"
-              // username = {props.username}
-
             >Start</Link></button>
           </div>
         </div>
