@@ -232,7 +232,7 @@ class App extends Component {
                 <Route path="/entry"
                   render={(props) => <EntryPage {...props} handleSubmit={this.handleSubmit} userNameReady={this.state.userNameReady}
                   checkUserReady={this.checkUserReady} handleChange={this.handleChange} username={this.username}/>} />
-                <Route path="/home" component={Home} />
+                <Route path="/home" username={this.username} component={Home} />
                 <Route
                   path='/game1'
                   render={(props) => <Game1 {...props} username={this.username} characters={this.state.characters} />}

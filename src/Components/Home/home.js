@@ -14,7 +14,7 @@ const start = () => {
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = {username: this.props.location.username}
+    this.state = {username: this.props.location.state.username}
   }
 
 
