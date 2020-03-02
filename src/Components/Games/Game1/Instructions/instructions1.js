@@ -21,11 +21,10 @@ class Instructions1 extends Component {
     }, 3000);
   }
   render() {
-    console.log(this.props)
     return (
       <div className="instructions" id="instructions1">
         <div id="instructions2">
-          <div className="imageInstru1" id="image">
+          <div className="imageInstru2" id="image">
             <h1 className="hinst-1"> {`Is it Alive? `}</h1>
           </div>
           <div className="">

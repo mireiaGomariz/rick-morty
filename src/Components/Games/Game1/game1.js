@@ -120,7 +120,6 @@ class Game1 extends Component {
     window.location.reload();
   }
   render() {
-    console.log('game 1111', this.props)
 
     let {character} = this.state
     return (
