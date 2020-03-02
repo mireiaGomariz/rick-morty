@@ -88,13 +88,13 @@ class Game1 extends Component {
     } else {
       if (this.state.character.status === event.target.textContent) {
         this.setState({
-          answer: "Correcte",
+          answer: "Correct",
           buttonClicked: true,
           points: this.state.points + 1,
         })
       }else{
         this.setState({
-          answer: "Incorrecte",
+          answer: "Wrong",
           buttonClicked: true,
         })
       }
