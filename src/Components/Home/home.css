@@ -52,14 +52,21 @@
   margin-left: -65%;
   font-size: 50px;
   text-decoration: none;
-  color: black;
+  -webkit-text-fill-color: #f80eaa;
+  -webkit-text-stroke:2px;
+  -webkit-text-stroke-color: hsl(0, 0%, 2%);
+  font-family: Calligraphr;
 }
 
 
 .textGame2 {
   margin-top: -250px;
-  margin-left: 72%;
+  margin-left: 71%;
   font-size: 50px;
   text-decoration: none;
-  color: black;
+  -webkit-text-fill-color: #f80eaa;
+  -webkit-text-stroke:2px;
+  -webkit-text-stroke-color: hsl(0, 0%, 2%);
+  font-family: Calligraphr;
+
 }

@@ -29,14 +29,14 @@ class Home extends Component {
         <div className="homeContainer">
             <Link to="/instructions1" style={{ textDecoration: 'none'}}>
               <img className="grilla1" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
-              <p className="textGame1">Game 1</p>
+              <p className="textGame1">Game I</p>
             </Link>
 
             <Link to="/instructions2" style={{ textDecoration: 'none'}}>
               <img
               onClick={start}
               className="grilla2" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
-              <p className="textGame2">Game 2</p>
+              <p className="textGame2">Game II</p>
             </Link>
 
         </div>
