@@ -112,11 +112,18 @@
     background: #9acd32;
     box-shadow: 0 0 10px #9acd32, 0 0 40px #ffff00, 0 0 80px#9acd32;
     font-family: Calligraphr;
-    text-decoration: none;
 
   }
 }
 
 .noUnderline {
   text-decoration: none;
+}
+
+.usernameText2 {
+  font-family: Calligraphr;
+  -webkit-text-fill-color: hsl(318, 94%, 50%);
+  -webkit-text-stroke:1px;
+  -webkit-text-stroke-color: hsl(184, 98%, 49%);
+  font-size: 50px;
 }

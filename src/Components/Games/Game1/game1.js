@@ -125,11 +125,12 @@ class Game1 extends Component {
               {!this.state.isFinish
                 ?
                 <div>
+                <h3 className="usernameText"> {this.props.username}</h3>
                 {getFinalResultOfCharacter(this.state.points)}
 
                   <h1 className="pointText1" >Points: {this.state.points} / {this.props.characters.length}</h1>
-                  <h3>{this.props.username}</h3>
-                  <button className="buttonTryAgainG1"   type="button"
+
+                  <button className="buttonTryAgainG1" type="button"
                   onClick = {this.tryAgain}
                   >Try Again</button>
                   <button className="buttonTryAgainG1" href="/home"><Link to="/home" style={{ textDecoration: 'none', color: 'black' }}>Back to Home</Link></button>

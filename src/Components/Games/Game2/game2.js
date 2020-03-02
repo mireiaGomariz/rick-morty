@@ -145,18 +145,17 @@ class Game2 extends Component {
         {this.state.attemptsCounter === 0
           ?
           <div>
+
+          <h3 className="usernameText2"> {this.props.username}</h3>
+            {getFinalResultOfCharacter(this.state.points)}
             <div className="textFinish">
               <h1>Points: {this.state.points} </h1>
             </div>
-            {getFinalResultOfCharacter(this.state.points)}
-
-
             <Button bsPrefix="buttonTryAgainG2"
             type="button"
             onClick = {this.tryAgain}>
             Try Again</Button>
             <button href="/home" className="backHomeButton"><Link to="/home" style={{ textDecoration: 'none', color: 'black'  }}>Back to Home</Link></button>
-
           </div>
           :
           <div className="game2Content">

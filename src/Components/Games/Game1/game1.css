@@ -73,7 +73,7 @@
     position: relative;
     width: 100vw;
     font-family: Calligraphr;
-    font-size: 70px;
+    font-size: 200px;
     background-position: center;
            -webkit-text-fill-color: hsl(318, 94%, 50%);
            -webkit-text-stroke:1px;
@@ -138,4 +138,13 @@
     color: #ffff00;
     background: #9acd32;
     box-shadow: 0 0 10px #9acd32, 0 0 40px #ffff00, 0 0 80px#9acd32;
+}
+
+
+.usernameText {
+  font-family: Calligraphr;
+  -webkit-text-fill-color: hsl(318, 94%, 50%);
+  -webkit-text-stroke:1px;
+  -webkit-text-stroke-color: hsl(184, 98%, 49%);
+  font-size: 70px;
 }
