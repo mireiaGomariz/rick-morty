@@ -9,6 +9,7 @@
     background-image: url("./espacio-one.png");
     background-repeat: no-repeat;
 }
+
 .pointText1{
     font-family: Get Schwifty;
     font-size: 40px;
@@ -16,6 +17,7 @@
            -webkit-text-stroke:2px;
            -webkit-text-stroke-color: hsl(64, 100%, 55%);
 }
+
 .titelName1 {
     font-family: Calligraphr;
     font-size: 50px;
@@ -23,18 +25,21 @@
            -webkit-text-stroke:1px;
            -webkit-text-stroke-color: hsl(320, 91%, 55%);
 }
+
 .correctIncorrect {
     font-family: Calligraphr;
     -webkit-text-fill-color: hsl(187, 91%, 55%);
     -webkit-text-stroke:1px;
     -webkit-text-stroke-color: hsl(246, 93%, 29%);
 }
+
 .bottoN3 {
     font-family: Calligraphr;
            -webkit-text-fill-color: hsl(315, 22%, 96%);
            -webkit-text-stroke:1px;
            -webkit-text-stroke-color: hsl(320, 91%, 55%);
 }
+
 .bottonN123 {
     position: relative;
     margin: 10px;
@@ -49,18 +54,22 @@
     font-size: 15px;
     transition: 0.2s;
   }
-  .bottonN123:hover 
-  {
+
+.bottonN123:hover 
+{
     text-transform: uppercase;
     padding: 7px 7px;
     color: #ffff00;
     background: #9acd32;
     box-shadow: 0 0 10px #9acd32, 0 0 40px #ffff00, 0 0 80px#9acd32; 
-  }
+}
+
 .fotoTodas12345 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
     position: relative;
-    width: 50px;
-    margin: 10px;
+    width: 100vw;
     font-family: Calligraphr;
     font-size: 70px;
     background-position: center;
@@ -68,8 +77,10 @@
            -webkit-text-stroke:1px;
            -webkit-text-stroke-color: hsl(184, 98%, 49%);
 }
+
+
+
 .textFinishGame {
-    padding-left: 300px;
     position: relative;
     background-position: center;
 }
@@ -79,18 +90,22 @@
     width: 200px;
     background-position: center;
 }
+
 .fotoMorty {
     width: 200px;
     background-position: center;
 }
+
 .fotoBeth {
     width: 200px;
     background-position: center;
 }
+
 .fotoSummer {
     height: 400px;
     background-position: center;
 }
+
 .fotoRick {
     width: 200px;
     background-position: center;
@@ -109,12 +124,14 @@
     font-size: 15px;
     overflow: hidden;
     transition: 0.2s;
-  }
-  .buttonTryAgainG1:hover 
-  {
+    color: black;
+    text-decoration: none;
+}
+
+.buttonTryAgainG1:hover {
     text-transform: uppercase;
     padding: 8px 8px;
     color: #ffff00;
     background: #9acd32;
     box-shadow: 0 0 10px #9acd32, 0 0 40px #ffff00, 0 0 80px#9acd32; 
-  }
+}

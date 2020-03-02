@@ -11,19 +11,17 @@
 .hinst-1 {
     font-family: Calligraphr;
     font-size: 100px;
-             -webkit-text-fill-color:rgb(37, 253, 17);
-             -webkit-text-stroke:3px;
-             -webkit-text-stroke-color: black;
+    -webkit-text-fill-color:rgb(37, 253, 17);
+    -webkit-text-stroke:3px;
+    -webkit-text-stroke-color: black;
+    height: 100px;
 
 }
 .imageInstru1 {
     width: 100vw;
     height: 100vh;
-    -webkit-backdrop-size: cover;
-    -moz-background-size: cover;
     background-size: cover;
-    background-image: url('./fondo-run-.png');
-    background-position:center;
+    background-image: url('./fondo-run-.png') no-repeat center center fixed;
 }
 
 
@@ -41,8 +39,7 @@
 
 .buttonGame1 {
   position: relative;
-  margin: 430px;
-  margin-right: 1px;
+  margin: auto;
   border: none;
   border-radius: 10px;
   background-position: center;
@@ -64,4 +61,8 @@
   color: #f80eaa;
   background: #9acd32;
   box-shadow: 0 0 10px #9acd32, 0 0 40px #f80eaa, 0 0 80px#9acd32;
+}
+
+.thisDiv {
+  height: 200px;
 }
