@@ -4,17 +4,17 @@
              -webkit-text-fill-color:rgb(37, 253, 17);
              -webkit-text-stroke:3px;
              -webkit-text-stroke-color:black;
-    
+
 }
-.fondo-instr-diseño {
+.imageInstru2 {
+
     width: 100vw;
     height: 100vh;
     -webkit-backdrop-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    background-position: center;
-    background-image: url('diseño_fondo.png');
-    background-repeat: no-repeat;
+    background-image: url('./diseño_fondo.png');
+    background-position:center;
 }
 .buttonGame2 {
     position: relative;
@@ -34,7 +34,7 @@
     overflow: hidden;
     transition: 0.2s;
   }
-  .buttonGame2:hover 
+  .buttonGame2:hover
   {
     text-transform: uppercase;
     padding: 10px 30px;

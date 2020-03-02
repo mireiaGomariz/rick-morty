@@ -22,43 +22,43 @@ function getFinalResultOfCharacter(points){
   if (points < 2) {
     return (
       <div>
-        <h1> You are Jerry! </h1>
-        <img src={imagesPoints[0]} alt="jerry smith"/>
-        <h3>"Life is effort and i'll stop when I die!"</h3>
+        <h1 className="resultCharacterTitle"> You are Jerry! </h1>
+        <img src={imagesPoints[0]} alt="jerry smith" className="resultsImg" />
+        <h3 className="quoteCharacter">"Life is effort and i'll stop when I die!"</h3>
 
       </div>
     )
   } else if (points < 5) {
     return (
       <div>
-        <h1> You are Morty! </h1>
-        <img src={imagesPoints[1]} alt="Morty"/>
-        <h3>"Nobody exists on propouse. nobody belongs anywhere. everybody's gonna die. Come watch tv?"</h3>
+        <h1 className="resultCharacterTitle"> You are Morty! </h1>
+        <img src={imagesPoints[1]} alt="Morty" className="resultsImg"/>
+        <h3 className="quoteCharacter">"Nobody exists on propouse. nobody belongs anywhere. everybody's gonna die. Come watch tv?"</h3>
       </div>
     )
   }else if (points < 7) {
     return (
       <div>
-        <h1> You are Beth! </h1>
-        <img src={imagesPoints[5]} alt="Beth"/>
-        <h3>"let's save the measuring for when our dicks are out it's time to save a life!"</h3>
+        <h1 className="resultCharacterTitle"> You are Beth! </h1>
+        <img  src={imagesPoints[4]} alt="Beth" className="resultsImg"/>
+        <h3 className="quoteCharacter">"let's save the measuring for when our dicks are out it's time to save a life!"</h3>
       </div>
     )
   }else if (points < 9) {
     return (
       <div>
-        <h1> You are Summer! </h1>
-        <img src={imagesPoints[2]} alt="Summer"/>
-        <h3>"All I have are pictures are of me and my friends from school. What? What teenage girl has pictures of her family? It's not like we're Mormon or dying"</h3>
+        <h1 className="resultCharacterTitle"> You are Summer! </h1>
+        <img  src={imagesPoints[2]} alt="Summer" className="resultsImg"/>
+        <h3 className="quoteCharacter">"All I have are pictures are of me and my friends from school. What? What teenage girl has pictures of her family? It's not like we're Mormon or dying"</h3>
 
       </div>
     )
   }else if (points > 9) {
     return (
       <div>
-        <h1> Congratulations you are Rick! </h1>
-        <img src={imagesPoints[3]} alt="Rick"/>
-        <h3>"To live is to risk it all; otherwise you're just an inert chunk of randomly assembled molecules drifting wherever the universe blows you..."</h3>
+        <h1 className="resultCharacterTitle"> Congratulations you are Rick! </h1>
+        <img src={imagesPoints[3]} alt="Rick"  className="resultsImg" />
+        <h3 className="quoteCharacter">"To live is to risk it all; otherwise you're just an inert chunk of randomly assembled molecules drifting wherever the universe blows you..."</h3>
       </div>
     )
   }
@@ -145,16 +145,17 @@ class Game2 extends Component {
         {this.state.attemptsCounter === 0
           ?
           <div>
+            <div className="textFinish">
+              <h1>Points: {this.state.points} </h1>
+            </div>
             {getFinalResultOfCharacter(this.state.points)}
-            <Button className="buttonTryAgainG2"
+
+
+            <Button bsPrefix="buttonTryAgainG2"
             type="button"
             onClick = {this.tryAgain}>
             Try Again</Button>
-            <div className="textFinish">
-            <h1>Finish Game </h1>
-            <h1>Points: {this.state.points} </h1>
-            </div>
-            <button href="/home"><Link to="/home">Back to Home</Link></button>
+            <button href="/home" className="backHomeButton"><Link to="/home">Back to Home</Link></button>
 
           </div>
           :

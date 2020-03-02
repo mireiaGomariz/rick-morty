@@ -21,7 +21,6 @@ class Instructions1 extends Component {
     }, 3000);
   }
   render() {
-    console.log(this.props)
     return (
       <div className="imageInstru1" id="image">
           <div className="instructions" id="instructions1">
