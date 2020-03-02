@@ -126,7 +126,7 @@ class Game1 extends Component {
     return (
       <div className= "fondo-game1-1">
               <div>
-              {this.state.isFinish
+              {!this.state.isFinish
                 ?
                 <div>
                 {getFinalResultOfCharacter(this.state.points)}

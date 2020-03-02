@@ -32,15 +32,34 @@
 }
 
 .grilla1 {
+
   width: 400px;
   height: 400px;
   display: flex;
+  margin-left: 100px;
+
 }
 
 .grilla2 {
   width: 400px;
   height: 400px;
-  margin-left: 450px;
+  margin-left: 750px;
   display: flex;
+  margin-top: -225px;
 }
 
+.textGame1 {
+
+  margin-top: -250px;
+  margin-left: -600px;
+  font-size: 50px;
+
+}
+
+
+.textGame2 {
+  margin-top: -250px;
+  margin-left: 700px;
+  font-size: 50px;
+  text-decoration: none;
+}

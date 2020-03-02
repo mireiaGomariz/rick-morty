@@ -20,7 +20,6 @@ class Home extends Component {
 
 
   render() {
-    console.log(audio)
     return (
     <div className="home-menu">
       <div className="container">
@@ -30,15 +29,18 @@ class Home extends Component {
         <div className="homeContainer">
           <Link to="/instructions1">
             <img className="grilla1" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
+
           </Link>
+          <p className="textGame1">Game 1</p>
+
           <Link to="/instructions2">
             <img
             onClick={start}
             className="grilla2" src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt=""></img>
-            <button
-            onClick={start}
-            >Test</button>
+
+
           </Link>
+          <p className="textGame2">Game 2</p>
         </div>
       </div>
     )
