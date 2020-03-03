@@ -38,7 +38,7 @@ function getFinalResultOfCharacter(points){
     return (
       <div className="fotoTodas12345">
             <h1 className="textFinishGame"> You are Beth! </h1>
-            <img className="fotoBeth" src={imagesPoints[5]} alt="Beth"/>
+            <img className="fotoBeth" src={imagesPoints[4]} alt="Beth"/>
             <h3>"let's save the measuring for when our dicks are out it's time to save a life!"</h3>
       </div>
     )
