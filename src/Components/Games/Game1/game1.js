@@ -113,9 +113,6 @@ class Game1 extends Component {
 
   }
 
-  tryAgain = event => {
-    window.location.reload();
-  }
   render() {
 
     let {character} = this.state
@@ -130,9 +127,7 @@ class Game1 extends Component {
 
                   <h1 className="pointText1" >Points: {this.state.points} / {this.props.characters.length}</h1>
 
-                  <button className="buttonTryAgainG1" type="button"
-                  onClick = {this.tryAgain}
-                  >Try Again</button>
+                  <button className="buttonTryAgainG1" href="/instructions1"><Link to="/instructions1" style={{ textDecoration: 'none', color: 'black' }}>Try Again</Link></button>
                   <button className="buttonTryAgainG1" href="/home"><Link to="/home" style={{ textDecoration: 'none', color: 'black' }}>Back to Home</Link></button>
                 </div>
                 :
