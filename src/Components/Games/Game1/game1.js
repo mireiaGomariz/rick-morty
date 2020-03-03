@@ -138,7 +138,7 @@ class Game1 extends Component {
                 :
                 <div className="">
                   <div className="">
-                    <h3 className="titelName1"> Character number:  {this.state.currentIndex + 1}</h3>
+                    <h3 className="nameCharacter"> Character number:  {this.state.currentIndex + 1}</h3>
                     <h1 className="titelName1">{character.name}</h1>
                     <img src={character.image} alt={character.name} />
                     {this.state.buttonClicked

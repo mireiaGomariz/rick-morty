@@ -15,13 +15,8 @@
 
 .buttonGame2 {
     font-family: Calligraphr;
-    position: relative;
-    margin: 430px;
-    margin-left: 1px;
     border: none;
     border-radius: 10px;
-    background-position: center;
-    display: inline-block;
     padding: 5px 20px;
     color: #0f0727;
     background-color: #f80eaa;
@@ -29,7 +24,6 @@
     letter-spacing: 2px;
     text-decoration: none;
     font-size: 15px;
-    overflow: hidden;
     transition: 0.2s;
   }
   .buttonGame2:hover

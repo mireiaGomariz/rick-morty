@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './instructions2.css';
 import {Link} from 'react-router-dom';
-import image4 from './dialog3.png';
+import image4 from './diseño_corregido.png';
 import image3 from './dialog4.png';
 
 
