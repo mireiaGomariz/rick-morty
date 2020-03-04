@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './instructions1.css';
 import image1 from './dialog1.png';
-import image2 from './dialog2_2.png';
+import image2 from './dialog2_3.png';
 import { Link } from 'react-router-dom';
 class Instructions1 extends Component {
   constructor(props) {

@@ -20,7 +20,6 @@ class EntryPage extends Component {
       <div>
        <BgMusic
        src={sound1}
-
         />
 
       </div>

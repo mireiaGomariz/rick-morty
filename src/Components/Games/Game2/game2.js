@@ -8,12 +8,6 @@ import Summer from './summer.png';
 import Beth from './beth.png';
 import { Link } from 'react-router-dom';
 
-// import BgMusic from '@react-element/bg-music'
-// import sound2 from './show-me-what-you-got.mp3'
-
-
-
-
 
 var imagesPoints= [Jerry, Morty, Summer, Rick, Beth];
 
@@ -129,19 +123,13 @@ class Game2 extends Component {
     window.location.reload();
   }
 
-  // pauseAudio = () => {
-  //   const audioEl = this.sound2.current;
-  //   if (audioEl) {
-  //     audioEl.pause();
-  //     audioEl.paused || this.updateState({ play: false });
-  //   }
-  // }
+
 
   render() {
 
     return (
 
-      <div className="game2Content">
+      <div className="game2Content" id="gameContainer" onClick= {this.pauseMusic}>
         {this.state.attemptsCounter === 0
           ?
           <div>
